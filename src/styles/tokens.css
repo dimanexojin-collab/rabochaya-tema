@@ -1,0 +1,47 @@
+/* Дизайн-токены (DESIGN.md: тёплый canvas → sand → white, единственный акцент — коралл).
+   Без теней, градиентов, второго акцента и синего. */
+:root {
+  /* цвет */
+  --canvas: #ebeadf;
+  --sand: #d5cec0;
+  --surface: #ffffff;
+  --ink: #000000;
+  --coral: #f04923;
+  /* производные (только прозрачность ink — без новых оттенков) */
+  --ink-60: rgb(0 0 0 / .6);
+  --hairline: 1px solid var(--ink);
+
+  /* типографика */
+  --font: 'Inter Variable', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --tracking: -0.05em;
+  --features: 'ss01' on, 'cv11' on;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --text-caption: 13px;   --lh-caption: 1.5;
+  --text-small: 14px;     --lh-small: 1.5;
+  --text-body: 16px;      --lh-body: 1.5;
+  --text-sub: 18px;       --lh-sub: 1.4;
+  --text-h3: 22px;        --lh-h3: 1.4;
+  --text-h2: 24px;        --lh-h2: 1.4;
+  --text-display: clamp(28px, 5vw, 40px); --lh-display: 1.1;
+  /* 60ch в Inter 400 (ширина «0» = 0.6309em). em, а не ch: ch считается по текущему шрифту и менял бы ширину
+     колонок при подмене запасного шрифта на Inter (сдвиг вёрстки, CLS) */
+  --measure: 37.85em;
+
+  /* форма и сетка */
+  --r-card: 12px;
+  --r-pill: 999px;
+  --container: 1200px;
+  --gutter: 16px;
+  --s-4: 4px; --s-8: 8px; --s-12: 12px; --s-16: 16px; --s-20: 20px; --s-24: 24px;
+  --s-32: 32px; --s-40: 40px; --s-64: 64px; --s-72: 72px; --s-96: 96px; --s-116: 116px;
+  --section-gap: 56px;
+  --card-pad: 24px;
+  --gap: 12px;
+  --grid-gap: 24px;
+  --header-h: 64px;
+
+  /* движение */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+@media (min-width: 768px) { :root { --section-gap: 80px; } }

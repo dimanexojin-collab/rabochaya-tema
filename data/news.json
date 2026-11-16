@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "trebuetsya-pryazha",
+    "date": "2022-03-06",
+    "title": "Ищем поставщика пряжи и нити",
+    "sourceTitle": "Требуется пряжа",
+    "kind": "info",
+    "images": [],
+    "sourceUrl": "https://www.5ni.ru/news/2022-03-06/trebuetsya-pryazha"
+  },
+  {
+    "slug": "skidka-za-opt-1000-par",
+    "date": "2022-04-19",
+    "title": "Скидка 10 % при покупке от 1000 пар",
+    "sourceTitle": "Скидка за опт",
+    "kind": "promo",
+    "until": "2022-05-19",
+    "images": [],
+    "sourceUrl": "https://www.5ni.ru/news/2022-04-19/skidka-za-opt"
+  },
+  {
+    "slug": "perchatki-10-klassa-s-platirovkoj",
+    "date": "2022-04-29",
+    "title": "Начат выпуск перчаток 10 класса с платировкой",
+    "sourceTitle": "НАЛАЖЕН ВЫПУСК ПЕРЧАТОК 10 КЛАССА С ПЛАТИРОВКОЙ",
+    "kind": "product",
+    "images": [],
+    "sourceUrl": "https://www.5ni.ru/news/2022-04-29/nalazhen-vypusk-perchatok-10-klassa-s-platirovkoy"
+  },
+  {
+    "slug": "plotnye-perchatki-seminitka",
+    "date": "2022-05-23",
+    "title": "Плотные перчатки «семинитка» для тяжёлых работ",
+    "sourceTitle": "Плотные толстые перчатки",
+    "kind": "product",
+    "images": [
+      "news-plotnye-perchatki-seminitka",
+      "news-plotnye-perchatki-seminitka-2"
+    ],
+    "thumb": "news-plotnye-perchatki-seminitka-thumb",
+    "sourceUrl": "https://www.5ni.ru/news/2022-05-23/plotnye-tolstye-perchatki"
+  },
+  {
+    "slug": "letnie-skidki-ot-obema",
+    "date": "2022-06-07",
+    "title": "Летняя акция: скидка до 10 % от 2000 пар",
+    "sourceTitle": "АКЦИЯ! Летние скидки",
+    "kind": "promo",
+    "images": [],
+    "thumb": "news-letnie-skidki-ot-obema-thumb",
+    "sourceUrl": "https://www.5ni.ru/news/2022-06-07/aktciya"
+  },
+  {
+    "slug": "skidka-20-na-dvojnye-perchatki",
+    "date": "2022-06-28",
+    "title": "Двойные перчатки со скидкой 20 % до конца июля 2022",
+    "sourceTitle": "Акция Двойные перчатки со скидкой 20 % до конца июля 2022 года",
+    "kind": "promo",
+    "until": "2022-07-31",
+    "images": [
+      "news-skidka-20-na-dvojnye-perchatki"
+    ],
+    "thumb": "news-skidka-20-na-dvojnye-perchatki-thumb",
+    "sourceUrl": "https://www.5ni.ru/news/2022-06-28/aktciya-dvoynye-perchatki-so-skidkoy-20-do-kontca-iyulya-2022-go"
+  },
+  {
+    "slug": "dvojnye-perchatki-28-rublej",
+    "date": "2022-10-05",
+    "title": "Двойные перчатки на холодный сезон — 28 ₽",
+    "sourceTitle": "Двойные перчатки по 28 рублей.",
+    "kind": "product",
+    "images": [
+      "news-dvojnye-perchatki-28-rublej"
+    ],
+    "sourceUrl": "https://www.5ni.ru/news/2022-10-05/dvoynye-perchatki-po-28-rubley"
+  },
+  {
+    "slug": "cvetnye-perchatki",
+    "date": "2023-02-25",
+    "title": "Вяжем цветные перчатки",
+    "sourceTitle": "Цветные перчатки",
+    "kind": "product",
+    "images": [
+      "news-cvetnye-perchatki"
+    ],
+    "thumb": "news-cvetnye-perchatki-thumb",
+    "sourceUrl": "https://www.5ni.ru/news/2023-02-25/tcvetnye-perchatki"
+  }
+]

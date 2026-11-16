@@ -1,0 +1,35 @@
+﻿---
+import Page from '../../layouts/Page.astro';
+import CategoryTile from '../../components/CategoryTile.astro';
+import { sections, categoriesOf, categoryPath, sectionPath, productsOfCategory, productsOfSection, minPrice, products } from '../../data/catalog.ts';
+import { url } from '../../lib/paths.ts';
+import { formatPrice } from '../../lib/format.ts';
+import { fitDescription, TAILS } from '../../lib/seo.ts';
+
+const title = 'Каталог: рабочие перчатки, рукавицы, СИЗ, обувь';
+const description = fitDescription(
+  `Каталог «Рабочей темы»: ${products.length} позиций — перчатки х/б и с ПВХ, с обливом, зимние, одноразовые, рукавицы, респираторы, беруши, очки, сапоги. Цены от ${formatPrice(minPrice(products))}.`,
+  ...TAILS,
+);
+const tileImage = (slug: string) => {
+  const c = categoriesOf('perchatki').concat(categoriesOf('siz'), categoriesOf('obuv')).find((x) => x.slug === slug)!;
+  return c.tile ?? c.image ?? productsOfCategory(slug)[0].image;
+};
+---
+<Page title={title} description={description} h1="Каталог продукции" crumbs={[{ name: 'Каталог', href: '/katalog/' }]}
+  lead="Перчатки собственного производства и средства защиты, которые мы продаём оптом и в розницу. Цены указаны с НДС.">
+  {sections.map((s) => (
+    <section class="section" aria-labelledby={`s-${s.slug}`}>
+      <h2 id={`s-${s.slug}`}><a href={url(sectionPath(s))}>{s.name}</a></h2>
+      <ul class="grid" role="list">
+        {s.direct
+          ? productsOfSection(s.slug).map((p) => (
+              <li><CategoryTile name={p.name} href={p.path} imageId={p.image} count={1} from={p.price} /></li>
+            ))
+          : categoriesOf(s.slug).map((c) => (
+              <li><CategoryTile name={c.name} href={categoryPath(c)} imageId={tileImage(c.slug)} count={productsOfCategory(c.slug).length} from={minPrice(productsOfCategory(c.slug))} /></li>
+            ))}
+      </ul>
+    </section>
+  ))}
+</Page>

@@ -1,0 +1,166 @@
+{
+  "note": "Цены с НДС, упаковка — мешок п/э",
+  "groups": [
+    {
+      "id": "kl-10",
+      "title": "Перчатки рабочие трикотажные с ПВХ 10 класс",
+      "colors": "чёрные/серые/пёстрые",
+      "rows": [
+        {
+          "id": "kl-10-116",
+          "name": "Перчатки рабочие с ПВХ «3» нити (116 текс)",
+          "tex": 116,
+          "threads": 3,
+          "priceFrom": 15,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-10-132",
+          "name": "Перчатки рабочие с ПВХ «4» нити (132 текс)",
+          "tex": 132,
+          "threads": 4,
+          "priceFrom": 16,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-10-141",
+          "name": "Перчатки рабочие с ПВХ «4» нити (141 текс)",
+          "tex": 141,
+          "threads": 4,
+          "priceFrom": 18,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-10-132-plat",
+          "name": "Перчатки рабочие с ПВХ «4» нити (132 текс) с платировкой",
+          "tex": 132,
+          "threads": 4,
+          "priceFrom": 26,
+          "bag": "300 пар"
+        }
+      ]
+    },
+    {
+      "id": "kl-7-5",
+      "title": "Перчатки рабочие трикотажные с ПВХ 7,5 класс",
+      "colors": "чёрные/серые/пёстрые",
+      "rows": [
+        {
+          "id": "kl-7-5-216",
+          "name": "Перчатки рабочие с ПВХ «4» нити (216 текс)",
+          "tex": 216,
+          "threads": 4,
+          "priceFrom": 16,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-7-5-250",
+          "name": "Перчатки рабочие с ПВХ «5» нитей (250 текс)",
+          "tex": 250,
+          "threads": 5,
+          "priceFrom": 18,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-7-5-290",
+          "name": "Перчатки рабочие с ПВХ «6» нитей (290 текс)",
+          "tex": 290,
+          "threads": 6,
+          "priceFrom": 24,
+          "bag": "300 пар"
+        },
+        {
+          "id": "kl-7-5-316",
+          "name": "Перчатки рабочие «7» нитей (316 текс) с ПВХ",
+          "tex": 316,
+          "threads": 7,
+          "priceFrom": 28,
+          "bag": "100 пар"
+        }
+      ]
+    },
+    {
+      "id": "prochee",
+      "title": "Двойные, полушерстяные и усиленные",
+      "rows": [
+        {
+          "id": "prochee-dvojnye",
+          "name": "Перчатки рабочие двойные",
+          "priceFrom": 60,
+          "bag": "200 пар"
+        },
+        {
+          "id": "prochee-dvojnye-pvh",
+          "name": "Перчатки рабочие двойные с ПВХ",
+          "priceFrom": 80,
+          "bag": "200 пар"
+        },
+        {
+          "id": "prochee-polusherst",
+          "name": "Перчатки рабочие п/ш",
+          "priceFrom": 100,
+          "bag": "200 пар"
+        },
+        {
+          "id": "prochee-sintetika-50",
+          "name": "Перчатки с 50% синтетики, неубиваемые",
+          "priceFrom": 30,
+          "bag": "100 пар"
+        }
+      ]
+    },
+    {
+      "id": "extra",
+      "title": "Дополнительные услуги",
+      "rows": [
+        {
+          "id": "extra-pod-zakaz",
+          "name": "Изготовление перчаток разного размера и цвета",
+          "priceFrom": null,
+          "bag": "по запросу"
+        }
+      ]
+    }
+  ],
+  "serial": [
+    {
+      "id": "serial-pvh-10-3-niti",
+      "oldUrls": [
+        "/perchatki-trikotazhnye-s-pvkh-10-klass-3-kh-nitka"
+      ],
+      "caption": "Перчатки трикотажные с ПВХ, 10 класс, «3 нити»",
+      "priceRow": "kl-10-116"
+    },
+    {
+      "id": "serial-pvh-10-4-niti",
+      "oldUrls": [
+        "/perchatki-trikotazhnye-s-pvkh-10-klass-4-kh-nitka"
+      ],
+      "caption": "Перчатки трикотажные с ПВХ, 10 класс, «4 нити»",
+      "priceRow": "kl-10-132"
+    },
+    {
+      "id": "serial-10-3-4-niti",
+      "oldUrls": [
+        "/perchatki-trikotazhnye-10-klass-3-kh-nitka",
+        "/perchatki-trikotazhnye-10-klass-4-kh-nitka"
+      ],
+      "caption": "Перчатки трикотажные без ПВХ, 10 класс, «3» и «4 нити»"
+    },
+    {
+      "id": "serial-pvh-7-4-niti",
+      "oldUrls": [
+        "/perchatki-trikotazhnye-s-pvkh-7-klass-4-kh-nitka"
+      ],
+      "caption": "Перчатки трикотажные с ПВХ, 7 класс, «4 нити»",
+      "priceRow": "kl-7-5-216"
+    },
+    {
+      "id": "serial-7-5-nitej",
+      "oldUrls": [
+        "/perchatki-trikotazhnye-7-klass-5-kh-nitka"
+      ],
+      "caption": "Перчатки трикотажные без ПВХ, 7 класс, «5 нитей» (пятинитка)"
+    }
+  ]
+}

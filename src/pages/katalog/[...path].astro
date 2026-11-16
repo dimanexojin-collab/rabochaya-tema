@@ -1,0 +1,161 @@
+---
+/**
+ * Разделы (/katalog/{раздел}/), категории (/katalog/{раздел}/{категория}/) и товары
+ * (/katalog/{раздел}/{категория}/{товар}/ или /katalog/rukavicy/{товар}/) из data/*.json.
+ */
+import type { GetStaticPaths } from 'astro';
+import { Picture, getImage } from 'astro:assets';
+import Page from '../../layouts/Page.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import CategoryTile from '../../components/CategoryTile.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import {
+  sections, categories, products, categoriesOf, productsOfCategory, productsOfSection, categoryPath, sectionPath,
+  minPrice, getSection, categoryOf, relatedProducts, imageRef, type Product, type Category, type Section,
+} from '../../data/catalog.ts';
+import { productCopy } from '../../data/copy/products.ts';
+import { categoryCopy, sectionCopy } from '../../data/copy/categories.ts';
+import { SITE, mainPhone } from '../../config/site.ts';
+import { img, WIDTHS } from '../../lib/images.ts';
+import { url } from '../../lib/paths.ts';
+import { productPrice, unitText } from '../../lib/format.ts';
+import { productTitle, productDescription, categoryTitle, categoryDescription, sectionTitle, sectionDescription } from '../../lib/seo.ts';
+import { productLd, type Crumb } from '../../lib/schema.ts';
+
+type Props =
+  | { kind: 'section'; section: Section }
+  | { kind: 'category'; section: Section; category: Category }
+  | { kind: 'product'; section: Section; category?: Category; product: Product };
+
+export const getStaticPaths = (() => [
+  ...sections.map((s) => ({ params: { path: s.slug }, props: { kind: 'section', section: s } })),
+  ...categories.map((c) => ({ params: { path: `${c.section}/${c.slug}` }, props: { kind: 'category', section: getSection(c.section), category: c } })),
+  ...products.map((p) => ({
+    params: { path: p.path.replace(/^\/katalog\/|\/$/g, '') },
+    props: { kind: 'product', section: getSection(p.sectionSlug), category: categoryOf(p), product: p },
+  })),
+]) satisfies GetStaticPaths;
+
+const props = Astro.props as Props;
+const { section } = props;
+const sectionCrumbs: Crumb[] = [{ name: 'Каталог', href: '/katalog/' }, { name: section.name, href: sectionPath(section) }];
+const ARTICLE = { href: '/stati/klass-vyazki-7-i-10/', label: 'Чем 7 класс вязки отличается от 10' };
+const knitted = (slug?: string | null) => slug === 's-pvh' || slug === 'h-b';
+
+// ---------- товар ----------
+let product: Product | undefined, pTitle = '', pDesc = '', ogImage: string | undefined, ld: ReturnType<typeof productLd> | undefined;
+if (props.kind === 'product') {
+  product = props.product;
+  pTitle = productTitle(product);
+  pDesc = productDescription(product);
+  const og = await getImage({ src: img(product.image), format: 'jpg', width: 800, quality: 85 });
+  ogImage = new URL(og.src, SITE.origin).href;
+  ld = productLd(product, pDesc, ogImage);
+}
+const phone = mainPhone();
+---
+{props.kind === 'section' && (
+  <Page title={sectionTitle(section)} description={sectionDescription(section)} h1={section.h1} crumbs={sectionCrumbs}>
+    {sectionCopy[section.slug].intro.map((t) => <p class="lead">{t}</p>)}
+    {!section.direct && (
+      <section class="section" aria-labelledby="cats">
+        <h2 id="cats">Категории</h2>
+        <ul class="grid" role="list">
+          {categoriesOf(section.slug).map((c) => (
+            <li><CategoryTile name={c.name} href={categoryPath(c)} imageId={c.image ?? c.tile ?? productsOfCategory(c.slug)[0].image} count={productsOfCategory(c.slug).length} from={minPrice(productsOfCategory(c.slug))} /></li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <section class="section" aria-labelledby="all">
+      <h2 id="all">{section.direct ? 'Товары' : `Все товары раздела «${section.name}»`}</h2>
+      <ProductGrid products={productsOfSection(section.slug)} eagerFirst={section.direct ? 2 : 0} />
+    </section>
+    {section.slug === 'perchatki' && <p><a href={url(ARTICLE.href)}>{ARTICLE.label}</a> · <a href={url('/optom/')}>Оптовый прайс</a></p>}
+  </Page>
+)}
+
+{props.kind === 'category' && (
+  <Page title={categoryTitle(props.category)} description={categoryDescription(props.category)} h1={props.category.h1}
+    crumbs={[...sectionCrumbs, { name: props.category.name, href: categoryPath(props.category) }]}>
+    {categoryCopy[props.category.slug].intro.map((t) => <p class="lead">{t}</p>)}
+    <section class="section" aria-labelledby="list">
+      <h2 id="list" class="visually-hidden">Товары категории</h2>
+      <ProductGrid products={productsOfCategory(props.category.slug)} eagerFirst={2} />
+    </section>
+    <p>
+      {knitted(props.category.slug) && <><a href={url(ARTICLE.href)}>{ARTICLE.label}</a> · <a href={url('/stati/teks-i-nomer-pryazhi/')}>Текс и «нитки»</a> · </>}
+      <a href={url('/optom/')}>Прайс для оптовиков</a> · <a href={url(sectionPath(section))}>Все {section.name.toLowerCase()}</a>
+    </p>
+  </Page>
+)}
+
+{props.kind === 'product' && product && (() => {
+  const p = product!;
+  const copy = productCopy[p.slug];
+  const cat = props.kind === 'product' ? props.category : undefined;
+  const q = imageRef(p.image).quality;
+  const unit = unitText(p);
+  const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(`Запрос счёта: ${p.name}`)}`;
+  const crumbs: Crumb[] = [...sectionCrumbs, ...(cat ? [{ name: cat.name, href: categoryPath(cat) }] : []), { name: p.name, href: p.path }];
+  return (
+    <Page title={pTitle} description={pDesc} h1={p.name} crumbs={crumbs} jsonLd={[ld!]} ogImage={ogImage} ogImageAlt={p.name} ogType="product" cta={false}>
+      <div class="product">
+        <div class="product__media">
+          <Picture src={img(p.image)} alt={p.name} formats={['avif', 'webp']} widths={[...WIDTHS.product]} sizes="(min-width: 900px) 480px, 90vw" loading="eager" fetchpriority="high" decoding="async" style={`view-transition-name: p-${p.slug}`} />
+        </div>
+        <div class="product__info">
+          {p.hit && <span class="badge">Хит продаж</span>}
+          <p class="lead">{copy.lead}</p>
+          <p class="product__price"><span class="price" data-price={p.price}>{productPrice(p)}</span>{unit && <span>{unit}</span>}</p>
+          {p.note && <p><strong>{p.note}</strong></p>}
+          {p.packaging.length > 0 && <p class="muted">{p.packaging.join(' · ')}</p>}
+          <div class="btn-row">
+            <a class="btn" href={mailto} data-magnetic>Запросить счёт</a>
+            <a class="btn btn--ghost" href={phone.href}>Позвонить {phone.display}</a>
+          </div>
+          <p class="caption muted">Безналичный расчёт с НДС 20 % — по счёту; за наличные — в отделе «{SITE.retailName}», {SITE.address.street}.</p>
+          {q !== 'original' && q !== 'original-normalized' && <p class="photo-note">Фото увеличено с превью; оригинальные снимки товара будут добавлены.</p>}
+        </div>
+      </div>
+
+      <div class="split section">
+        <section aria-labelledby="specs">
+          <h2 id="specs">Характеристики</h2>
+          <dl class="specs">
+            {p.specs.map(([k, v]) => <><dt>{k}</dt><dd>{v}</dd></>)}
+            {p.brand && <><dt>Бренд</dt><dd>{p.brand}</dd></>}
+          </dl>
+          {p.standards.length > 0 && (
+            <>
+              <h3>Нормы и документы</h3>
+              <ul class="tags">{p.standards.map((s) => <li>{s}</li>)}</ul>
+            </>
+          )}
+        </section>
+        <section class="prose" aria-labelledby="about">
+          <h2 id="about">Описание</h2>
+          {copy.body.map((t) => <p>{t}</p>)}
+          {copy.use && (
+            <>
+              <h3>Где применяют</h3>
+              <ul>{copy.use.map((u) => <li>{u}</li>)}</ul>
+            </>
+          )}
+          <p>
+            {knitted(p.categorySlug) && <><a href={url(ARTICLE.href)}>{ARTICLE.label}</a> · </>}
+            <a href={url('/optom/')}>Оптовый прайс</a>
+            {cat && <> · <a href={url(categoryPath(cat))}>{cat.name}</a></>}
+          </p>
+        </section>
+      </div>
+
+      <section class="section" aria-labelledby="related">
+        <h2 id="related">Похожие товары</h2>
+        <ProductGrid products={relatedProducts(p)} />
+      </section>
+
+      <LeadForm item={p.name} />
+    </Page>
+  );
+})()}

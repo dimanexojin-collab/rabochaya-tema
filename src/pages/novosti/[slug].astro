@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Picture, getImage } from 'astro:assets';
+import Page from '../../layouts/Page.astro';
+import { news, type NewsItem } from '../../data/catalog.ts';
+import { newsCopy } from '../../data/copy/news.ts';
+import { SITE } from '../../config/site.ts';
+import { img, alt, WIDTHS } from '../../lib/images.ts';
+import { url } from '../../lib/paths.ts';
+import { formatDate } from '../../lib/format.ts';
+import { newsStatus } from '../../lib/news.ts';
+import { pickTitle, fitDescription, TAILS } from '../../lib/seo.ts';
+import { articleLd } from '../../lib/schema.ts';
+
+export const getStaticPaths = (() => news.map((n) => ({ params: { slug: n.slug }, props: { item: n } }))) satisfies GetStaticPaths;
+
+const { item: n } = Astro.props as { item: NewsItem };
+const copy = newsCopy[n.slug];
+const status = newsStatus(n);
+const path = `/novosti/${n.slug}/`;
+const title = pickTitle(`${n.title} — новости «Рабочей темы»`, n.title);
+const description = fitDescription(`${formatDate(n.date)}: ${copy.lead}`, `${copy.body[0]}`, ...TAILS);
+const cover = n.images[0] ?? n.thumb;
+const ogImage = cover ? new URL((await getImage({ src: img(cover), format: 'jpg', width: 1200, quality: 80 })).src, SITE.origin).href : undefined;
+const others = news.filter((x) => x.slug !== n.slug).slice(0, 3);
+---
+<Page title={title} description={description} h1={n.title} crumbs={[{ name: 'Новости', href: '/novosti/' }, { name: n.title, href: path }]}
+  jsonLd={[articleLd({ type: 'NewsArticle', headline: n.title, description, path, date: n.date, image: ogImage })]} ogImage={ogImage} ogImageAlt={n.title} ogType="article">
+  <p slot="head" class="caption muted"><time datetime={n.date}>{formatDate(n.date)}</time>{status && ` · ${status}`}</p>
+  <div class="prose">
+    <p class="lead">{copy.lead}</p>
+    {copy.body.map((t) => <p>{t}</p>)}
+    {copy.links && <ul>{copy.links.map((l) => <li><a href={url(l.href)}>{l.label}</a></li>)}</ul>}
+  </div>
+  {[...n.images, ...(n.images.length ? [] : n.thumb ? [n.thumb] : [])].map((id, i) => (
+    <figure class="section media-round" style="max-width: 760px" data-reveal>
+      <Picture src={img(id)} alt={alt(id)} formats={['avif', 'webp']} widths={[...WIDTHS.large].filter((w) => w <= 1280)} sizes="(min-width: 800px) 760px, 92vw" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" />
+    </figure>
+  ))}
+  <section class="section" aria-labelledby="more">
+    <h2 id="more">Другие новости</h2>
+    <ul class="contact-list">{others.map((o) => <li><a href={url(`/novosti/${o.slug}/`)}>{o.title}</a> <span class="caption muted">{formatDate(o.date)}</span></li>)}</ul>
+  </section>
+</Page>

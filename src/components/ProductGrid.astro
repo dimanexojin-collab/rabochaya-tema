@@ -1,0 +1,16 @@
+---
+import type { Product } from '../data/catalog.ts';
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  products: Product[];
+  level?: 2 | 3;
+  eagerFirst?: number;
+  /** чётная сетка: 2 колонки до 1080 px, затем 4 (без «висящей» карточки) */
+  even?: boolean;
+}
+const { products, level = 3, eagerFirst = 0, even = false } = Astro.props;
+---
+<ul class:list={['grid', { 'grid--even': even }]} role="list">
+  {products.map((p, i) => <li><ProductCard product={p} level={level} eager={i < eagerFirst} priority={i === 0 && eagerFirst > 0} /></li>)}
+</ul>

@@ -1,0 +1,1296 @@
+[
+  {
+    "id": "perchatki-pvh-10-klass-serye",
+    "slug": "perchatki-pvh-10-klass-serye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-pvh",
+    "path": "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-serye/",
+    "name": "Перчатки рабочие с ПВХ 10 класс вязки, серые",
+    "shortName": "С ПВХ, 10 класс, серые",
+    "sourceName": "Перчатки рабочие с ПВХ 10 класс вязки (серые)",
+    "price": 16,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "10"
+      ],
+      [
+        "Плотность",
+        "3–4 нити"
+      ],
+      [
+        "Покрытие",
+        "ПВХ «точка»"
+      ],
+      [
+        "Цвет",
+        "серый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-pvh-10-klass-serye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-10-klass-vyazki"
+  },
+  {
+    "id": "perchatki-dvojnoj-lateksnyj-obliv",
+    "slug": "perchatki-dvojnoj-lateksnyj-obliv",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-oblivom",
+    "path": "/katalog/perchatki/s-oblivom/perchatki-dvojnoj-lateksnyj-obliv/",
+    "name": "Перчатки с двойным латексным обливом",
+    "shortName": "Двойной латексный облив",
+    "sourceName": "Перчатки с двойным латексным обливом",
+    "price": 26,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Основа",
+        "хлопок с полиэфирной нитью"
+      ],
+      [
+        "Класс вязки",
+        "10 (10 петель на дюйм), 4 нити"
+      ],
+      [
+        "Покрытие",
+        "двойной полный облив латексом, манжета без латекса"
+      ],
+      [
+        "Вес",
+        "≈ 45 г"
+      ]
+    ],
+    "standards": [],
+    "packaging": [
+      "В мешке 200 пар"
+    ],
+    "image": "perchatki-dvojnoj-lateksnyj-obliv",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-oblivom/perchatki-s-dvoynym-lateksnym-oblivom"
+  },
+  {
+    "id": "perchatki-pvh-7-klass-belye",
+    "slug": "perchatki-pvh-7-klass-belye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-pvh",
+    "path": "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-belye/",
+    "name": "Перчатки рабочие с ПВХ 7 класс вязки, белые",
+    "shortName": "С ПВХ, 7 класс, белые",
+    "sourceName": "Перчатки рабочие с ПВХ 7 класс вязки (белые)",
+    "price": 17,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Класс вязки",
+        "7"
+      ],
+      [
+        "Плотность",
+        "3–7 нитей"
+      ],
+      [
+        "Покрытие",
+        "ПВХ «точка»"
+      ],
+      [
+        "Цвет",
+        "белый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-pvh-7-klass-belye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-s-pvkh-7-klass-vyazki-belye"
+  },
+  {
+    "id": "perchatki-pvh-10-klass-belye",
+    "slug": "perchatki-pvh-10-klass-belye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-pvh",
+    "path": "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-belye/",
+    "name": "Перчатки рабочие с ПВХ 10 класс вязки, белые",
+    "shortName": "С ПВХ, 10 класс, белые",
+    "sourceName": "Перчатки рабочие с ПВХ 10 класс вязки (белые)",
+    "price": 15,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "10"
+      ],
+      [
+        "Плотность",
+        "3–4 нити"
+      ],
+      [
+        "Покрытие",
+        "ПВХ «точка»"
+      ],
+      [
+        "Цвет",
+        "белый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-pvh-10-klass-belye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-10-klass-vyazki-belye"
+  },
+  {
+    "id": "perchatki-hb-7-klass-belye",
+    "slug": "perchatki-hb-7-klass-belye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "h-b",
+    "path": "/katalog/perchatki/h-b/perchatki-hb-7-klass-belye/",
+    "name": "Перчатки рабочие х/б 7 класс вязки, белые",
+    "shortName": "Х/б, 7 класс, белые",
+    "sourceName": "Перчатки рабочие х/б 7 класс вязки (белые)",
+    "price": 14,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Класс вязки",
+        "7"
+      ],
+      [
+        "Плотность",
+        "3–7 нитей"
+      ],
+      [
+        "Покрытие",
+        "без покрытия"
+      ],
+      [
+        "Цвет",
+        "белый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-hb-7-klass-belye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-7-klass-vyazki-belye"
+  },
+  {
+    "id": "perchatki-hb-10-klass-belye",
+    "slug": "perchatki-hb-10-klass-belye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "h-b",
+    "path": "/katalog/perchatki/h-b/perchatki-hb-10-klass-belye/",
+    "name": "Перчатки рабочие х/б 10 класс вязки, белые",
+    "shortName": "Х/б, 10 класс, белые",
+    "sourceName": "Перчатки рабочие х/б 10 класс вязки (белые)",
+    "price": 13,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "10"
+      ],
+      [
+        "Плотность",
+        "3–4 нити"
+      ],
+      [
+        "Покрытие",
+        "без покрытия"
+      ],
+      [
+        "Цвет",
+        "белый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-hb-10-klass-belye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-10-klass-vyazki-belye"
+  },
+  {
+    "id": "perchatki-hb-7-klass-serye",
+    "slug": "perchatki-hb-7-klass-serye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "h-b",
+    "path": "/katalog/perchatki/h-b/perchatki-hb-7-klass-serye/",
+    "name": "Перчатки рабочие х/б 7 класс вязки, серые",
+    "shortName": "Х/б, 7 класс, серые",
+    "sourceName": "Перчатки рабочие х/б 7 класс вязки (серые)",
+    "price": 14,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "7"
+      ],
+      [
+        "Плотность",
+        "3–7 нитей"
+      ],
+      [
+        "Цвет",
+        "серый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-hb-7-klass-serye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-7-klass-vyazki-serye"
+  },
+  {
+    "id": "perchatki-hb-10-klass-serye",
+    "slug": "perchatki-hb-10-klass-serye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "h-b",
+    "path": "/katalog/perchatki/h-b/perchatki-hb-10-klass-serye/",
+    "name": "Перчатки рабочие х/б 10 класс вязки, серые",
+    "shortName": "Х/б, 10 класс, серые",
+    "sourceName": "Перчатки рабочие х/б 10 класс вязки (серые)",
+    "price": 13,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "10"
+      ],
+      [
+        "Плотность",
+        "3–4 нити"
+      ],
+      [
+        "Покрытие",
+        "без покрытия"
+      ],
+      [
+        "Цвет",
+        "серый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-hb-10-klass-serye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-10-klass-vyazki-serye"
+  },
+  {
+    "id": "perchatki-hb-lateksnyj-obliv",
+    "slug": "perchatki-hb-lateksnyj-obliv",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-oblivom",
+    "path": "/katalog/perchatki/s-oblivom/perchatki-hb-lateksnyj-obliv/",
+    "name": "Перчатки х/б с латексным обливом",
+    "shortName": "Латексный облив",
+    "sourceName": "Перчатки ХБ латексный облив",
+    "price": 24,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Основа",
+        "хлопок"
+      ],
+      [
+        "Класс вязки",
+        "10, 13"
+      ],
+      [
+        "Покрытие",
+        "латексный облив"
+      ],
+      [
+        "Цвет",
+        "красный или зелёный"
+      ],
+      [
+        "Вес перчатки",
+        "≈ 38 г"
+      ],
+      [
+        "Манжета",
+        "край обработан термоспекаемой нитью"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-hb-lateksnyj-obliv",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-oblivom/perchatki-s-odinarnym-lateksnym-oblivom"
+  },
+  {
+    "id": "perchatki-pvh-7-klass-serye",
+    "slug": "perchatki-pvh-7-klass-serye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "s-pvh",
+    "path": "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-serye/",
+    "name": "Перчатки рабочие с ПВХ 7 класс вязки, серые",
+    "shortName": "С ПВХ, 7 класс, серые",
+    "sourceName": "Перчатки рабочие с ПВХ 7 класс вязки (серые)",
+    "price": 18,
+    "priceFrom": true,
+    "unit": "пара",
+    "hit": true,
+    "specs": [
+      [
+        "Класс вязки",
+        "7"
+      ],
+      [
+        "Плотность",
+        "3–7 нитей"
+      ],
+      [
+        "Покрытие",
+        "ПВХ «точка»"
+      ],
+      [
+        "Цвет",
+        "серый"
+      ],
+      [
+        "Применение",
+        "широкий спектр работ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-pvh-7-klass-serye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-7-klass-vyazki-serye"
+  },
+  {
+    "id": "perchatki-polusherstyanye-dvojnye",
+    "slug": "perchatki-polusherstyanye-dvojnye",
+    "sectionSlug": "perchatki",
+    "categorySlug": "zimnie",
+    "path": "/katalog/perchatki/zimnie/perchatki-polusherstyanye-dvojnye/",
+    "name": "Перчатки полушерстяные двойные",
+    "shortName": "Полушерстяные двойные",
+    "sourceName": "Перчатки полушерстяные двойные",
+    "price": 80,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "полушерсть"
+      ],
+      [
+        "Конструкция",
+        "двойные"
+      ],
+      [
+        "Класс вязки",
+        "7"
+      ],
+      [
+        "Покрытие",
+        "без ПВХ"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-polusherstyanye-dvojnye",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-zimnie/perchatki-polusherstyanye-dvoynye"
+  },
+  {
+    "id": "sapogi-arktika-uteplennye",
+    "slug": "sapogi-arktika-uteplennye",
+    "sectionSlug": "obuv",
+    "categorySlug": "sapogi",
+    "path": "/katalog/obuv/sapogi/sapogi-arktika-uteplennye/",
+    "name": "Сапоги «Арктика» резиновые мужские утеплённые",
+    "shortName": "Сапоги «Арктика»",
+    "sourceName": "Сапоги Арктика резиновые мужские утепленные",
+    "price": 4500,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Верх",
+        "вспененный полиуретан"
+      ],
+      [
+        "Подошва",
+        "морозостойкий термопластичный полиуретан"
+      ],
+      [
+        "Теплозащита",
+        "до −50 °С"
+      ],
+      [
+        "Голенище",
+        "регулируется по ширине"
+      ],
+      [
+        "Защитный носок",
+        "композитный (Мун 200)"
+      ],
+      [
+        "Антипрокольная прокладка",
+        "металлическая (1200 Н)"
+      ],
+      [
+        "Утеплитель",
+        "вкладной чулок: металлизированная плёнка + Тинсулейт®"
+      ],
+      [
+        "Климатические пояса",
+        "II, III, IV и особый"
+      ],
+      [
+        "Цвет",
+        "чёрный"
+      ],
+      [
+        "Вес брутто",
+        "3,55–4,65 кг"
+      ],
+      [
+        "Объём брутто",
+        "0,026 м³"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011"
+    ],
+    "packaging": [],
+    "image": "sapogi-arktika-uteplennye",
+    "sourceUrl": "https://www.5ni.ru/page/sapogi/sapogi-arktika-rezinovye-muzhskie-uteplennye"
+  },
+  {
+    "id": "berushi-3m-1110",
+    "slug": "berushi-3m-1110",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-sluha",
+    "path": "/katalog/siz/zashchita-sluha/berushi-3m-1110/",
+    "name": "Беруши 3М 1110",
+    "shortName": "Беруши 3М 1110",
+    "sourceName": "Беруши 3М 1110",
+    "brand": "3М",
+    "price": 20,
+    "priceFrom": false,
+    "unit": "TODO",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "полиуретан"
+      ],
+      [
+        "Форма",
+        "конусообразная"
+      ],
+      [
+        "Снижение шума (SNR)",
+        "37 дБ"
+      ],
+      [
+        "Уход",
+        "можно мыть водой с мылом"
+      ],
+      [
+        "Производитель",
+        "3М"
+      ]
+    ],
+    "standards": [
+      "ГОСТ Р 12.4.209-99"
+    ],
+    "packaging": [
+      "В упаковке 100 пар"
+    ],
+    "image": "berushi-3m-1110",
+    "sourceUrl": "https://www.5ni.ru/siz/zashita-organov-slukha/berushi-3m-1110"
+  },
+  {
+    "id": "berushi-3m-1100",
+    "slug": "berushi-3m-1100",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-sluha",
+    "path": "/katalog/siz/zashchita-sluha/berushi-3m-1100/",
+    "name": "Беруши 3М 1100",
+    "shortName": "Беруши 3М 1100",
+    "sourceName": "Беруши 1100",
+    "brand": "3М",
+    "price": 16,
+    "priceFrom": false,
+    "unit": "TODO",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "полиуретан"
+      ],
+      [
+        "Форма",
+        "конусообразная"
+      ],
+      [
+        "Снижение шума (SNR)",
+        "37 дБ"
+      ],
+      [
+        "Уход",
+        "можно мыть водой с мылом"
+      ],
+      [
+        "Производитель",
+        "3М"
+      ]
+    ],
+    "standards": [
+      "ГОСТ Р 12.4.209-99"
+    ],
+    "packaging": [
+      "В упаковке 200 пар"
+    ],
+    "image": "berushi-3m-1100",
+    "sourceUrl": "https://www.5ni.ru/siz/zashita-organov-slukha/berushi-1100"
+  },
+  {
+    "id": "respirator-alina-200",
+    "slug": "respirator-alina-200",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-alina-200/",
+    "name": "Респиратор Алина 200",
+    "shortName": "Алина 200",
+    "sourceName": "Респиратор Алина 200",
+    "price": 35,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D"
+      ],
+      [
+        "Клапан выдоха",
+        "нет"
+      ],
+      [
+        "Защита",
+        "пыль, дым, туман — до 12 ПДК"
+      ],
+      [
+        "Конструкция",
+        "неформованная полумаска"
+      ],
+      [
+        "Гарантийный срок хранения",
+        "5 лет"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.294-2015",
+      "Подтверждение Минпромторга"
+    ],
+    "packaging": [
+      "Индивидуальная упаковка",
+      "В коробке 250 шт"
+    ],
+    "image": "respirator-alina-200",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-200"
+  },
+  {
+    "id": "respirator-alina-210",
+    "slug": "respirator-alina-210",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-alina-210/",
+    "name": "Респиратор Алина 210",
+    "shortName": "Алина 210",
+    "sourceName": "Респиратор Алина 210",
+    "price": 70,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D"
+      ],
+      [
+        "Клапан выдоха",
+        "есть"
+      ],
+      [
+        "Защита",
+        "пыль, дым, туман — до 12 ПДК"
+      ],
+      [
+        "Конструкция",
+        "неформованная полумаска"
+      ],
+      [
+        "Гарантийный срок хранения",
+        "5 лет"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.294-2015",
+      "Подтверждение Минпромторга"
+    ],
+    "packaging": [
+      "Индивидуальная упаковка",
+      "В коробке 250 шт"
+    ],
+    "image": "respirator-alina-210",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-210"
+  },
+  {
+    "id": "respirator-alina-310",
+    "slug": "respirator-alina-310",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-alina-310/",
+    "name": "Респиратор Алина 310",
+    "shortName": "Алина 310",
+    "sourceName": "Респиратор Алина 310",
+    "price": 90,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP3 NR D"
+      ],
+      [
+        "Клапан выдоха",
+        "есть"
+      ],
+      [
+        "Защита",
+        "пыль, дым, туман — до 50 ПДК"
+      ],
+      [
+        "Конструкция",
+        "неформованная полумаска с пластиковым каркасом"
+      ],
+      [
+        "Гарантийный срок хранения",
+        "5 лет"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.294-2015",
+      "Подтверждение Минпромторга"
+    ],
+    "packaging": [
+      "Индивидуальная упаковка",
+      "В коробке 250 шт"
+    ],
+    "image": "respirator-alina-310",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-310"
+  },
+  {
+    "id": "respirator-alina-211",
+    "slug": "respirator-alina-211",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-alina-211/",
+    "name": "Респиратор Алина 211",
+    "shortName": "Алина 211",
+    "sourceName": "Респиратор Алина 211 (Аналог Алина АВ)",
+    "note": "Аналог Алина АВ",
+    "price": 135,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D"
+      ],
+      [
+        "Клапан выдоха",
+        "есть"
+      ],
+      [
+        "Защита",
+        "аэрозоли до 12 ПДК; органические газы, пары от нагрева металлов, сварочные аэрозоли и озон до 5 ПДК"
+      ],
+      [
+        "Технология",
+        "3D FLEX-TO-FIT, универсальный размер"
+      ],
+      [
+        "Гарантийный срок хранения",
+        "4 года"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.294-2015",
+      "ГОСТ Р 12.4.191-2011",
+      "EN 149:2001 +A1:2009"
+    ],
+    "packaging": [
+      "Индивидуальная упаковка",
+      "В коробке 200 шт"
+    ],
+    "image": "respirator-alina-211",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-211"
+  },
+  {
+    "id": "perchatki-vibrostat-01",
+    "slug": "perchatki-vibrostat-01",
+    "sectionSlug": "perchatki",
+    "categorySlug": "vibrozashchitnye",
+    "path": "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-01/",
+    "name": "Перчатки виброзащитные Вибростат-01",
+    "shortName": "Вибростат-01",
+    "sourceName": "Перчатки Вибростат-01",
+    "price": 1800,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Материал верха",
+        "кожа КРС"
+      ],
+      [
+        "Подкладка",
+        "100 % полиэфир"
+      ],
+      [
+        "Вибропоглощающий вкладыш",
+        "вспененный полимер «Airgel®»"
+      ],
+      [
+        "Защитные свойства",
+        "Мв, Ми, Мп, Тхп"
+      ],
+      [
+        "Виброзащита",
+        "тип 2А (100 Н): 16–1000 Гц; тип 2Б (200 Н): 8–1000 Гц"
+      ],
+      [
+        "Контакт с холодными поверхностями",
+        "до −5 °С"
+      ],
+      [
+        "Антиэлектростатические свойства",
+        "есть"
+      ],
+      [
+        "Класс риска",
+        "1"
+      ],
+      [
+        "Производство",
+        "Россия"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.002-97",
+      "ГОСТ 12.4.252-2013",
+      "ГОСТ EN 388-2012",
+      "ГОСТ EN 407-2012",
+      "ГОСТ Р ЕН 1149-5-2008",
+      "ГОСТ 12.4.274-2014"
+    ],
+    "packaging": [],
+    "image": "perchatki-vibrostat-01",
+    "sourceUrl": "https://www.5ni.ru/produktciya/vibrazaschitnye/perchatki-vibrostat-01"
+  },
+  {
+    "id": "perchatki-vibrostat-03",
+    "slug": "perchatki-vibrostat-03",
+    "sectionSlug": "perchatki",
+    "categorySlug": "vibrozashchitnye",
+    "path": "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-03/",
+    "name": "Перчатки виброзащитные Вибростат-03",
+    "shortName": "Вибростат-03",
+    "sourceName": "Перчатки Вибростат-03",
+    "price": 1100,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Основа",
+        "хлопок"
+      ],
+      [
+        "Покрытие",
+        "маслостойкая резина на основе бутадиен-нитрильного латекса"
+      ],
+      [
+        "Манжета",
+        "искусственная кожа, СВТ-лента, эластичная лента"
+      ],
+      [
+        "Вкладка",
+        "флис"
+      ],
+      [
+        "Вибропоглощающий вкладыш",
+        "вспененный полимер «Airgel®»"
+      ],
+      [
+        "Защитные свойства",
+        "Ми, Мв, Мп, Тхп"
+      ],
+      [
+        "Уровни EN 388",
+        "3512"
+      ],
+      [
+        "Виброзащита",
+        "тип 2А (100 Н): 63–1000 Гц; тип 2Б (200 Н): 8–250 Гц"
+      ],
+      [
+        "Контакт с холодными поверхностями",
+        "до −5 °С"
+      ],
+      [
+        "Класс риска",
+        "1"
+      ],
+      [
+        "Производство",
+        "Россия"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ EN 388-2012",
+      "ГОСТ Р ЕН 1149-5-2008",
+      "ГОСТ 12.4.274-2014",
+      "ГОСТ 12.4.002-97",
+      "ГОСТ 12.4.252-2013"
+    ],
+    "packaging": [],
+    "image": "perchatki-vibrostat-03",
+    "sourceUrl": "https://www.5ni.ru/produktciya/vibrazaschitnye/perchatki-vibrostat-03"
+  },
+  {
+    "id": "respirator-alina-av",
+    "slug": "respirator-alina-av",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-alina-av/",
+    "name": "Респиратор Алина АВ",
+    "shortName": "Алина АВ",
+    "sourceName": "Респиратор Алина АВ (Предлагаем аналог Алина 211)",
+    "note": "Предлагаем аналог — Алина 211",
+    "price": 135,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D"
+      ],
+      [
+        "Клапан выдоха",
+        "есть"
+      ],
+      [
+        "Защита",
+        "аэрозоли (в т. ч. сварочные) до 12 ПДК, органические и неорганические газы, пары от нагрева металлов, озон"
+      ],
+      [
+        "Сорбирующий слой",
+        "активированный уголь"
+      ],
+      [
+        "Конструкция",
+        "неформованная полумаска с пластиковым каркасом"
+      ],
+      [
+        "Гарантийный срок хранения",
+        "5 лет"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011",
+      "ГОСТ 12.4.294-2015",
+      "ГОСТ Р 59959-2021",
+      "Подтверждение Минпромторга"
+    ],
+    "packaging": [
+      "Индивидуальная упаковка",
+      "В коробке 180 шт"
+    ],
+    "image": "respirator-alina-av",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-av"
+  },
+  {
+    "id": "perchatki-morozostojkie-plamya",
+    "slug": "perchatki-morozostojkie-plamya",
+    "sectionSlug": "perchatki",
+    "categorySlug": "zimnie",
+    "path": "/katalog/perchatki/zimnie/perchatki-morozostojkie-plamya/",
+    "name": "Перчатки морозостойкие «Пламя»",
+    "shortName": "Морозостойкие «Пламя»",
+    "sourceName": "Перчатки морозостойкие Пламя",
+    "price": 350,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Основа",
+        "джерси (100 % хлопок) с термоизоляционным слоем"
+      ],
+      [
+        "Покрытие",
+        "полное, многослойное морозостойкое ПВХ, оранжевое"
+      ],
+      [
+        "Манжета",
+        "жёсткая крага"
+      ],
+      [
+        "Вес",
+        "0,20 кг"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "perchatki-morozostojkie-plamya",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-zimnie/perchatki-morozostoykie-plamya"
+  },
+  {
+    "id": "ochki-uvex-ultravizhn",
+    "slug": "ochki-uvex-ultravizhn",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-zreniya",
+    "path": "/katalog/siz/zashchita-zreniya/ochki-uvex-ultravizhn/",
+    "name": "Защитные очки UVEX Ультравижн",
+    "shortName": "UVEX Ультравижн",
+    "sourceName": "Защитные очки UVEX Ультравижн",
+    "brand": "UVEX",
+    "price": 1150,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Конструкция",
+        "закрытые панорамные, обзор 180°, непрямая вентиляция"
+      ],
+      [
+        "Линза",
+        "ударопрочный ацетат, прозрачная, оптический класс 1"
+      ],
+      [
+        "Покрытие линзы",
+        "Antifog — против запотевания"
+      ],
+      [
+        "Защита",
+        "брызги кислот, щелочей, нефтепродуктов; частицы до 45 м/с; ультрафиолет"
+      ],
+      [
+        "Совместимость",
+        "надеваются на корригирующие очки; сочетаются со щитком 9301317"
+      ],
+      [
+        "Масса",
+        "126 г"
+      ]
+    ],
+    "standards": [
+      "ТР ТС 019/2011"
+    ],
+    "packaging": [],
+    "image": "ochki-uvex-ultravizhn",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-glaz/zaschitnye-ochki-uvex-ultravizhn"
+  },
+  {
+    "id": "rukavicy-hb-brezentovyj-naladonnik",
+    "slug": "rukavicy-hb-brezentovyj-naladonnik",
+    "sectionSlug": "rukavicy",
+    "categorySlug": null,
+    "path": "/katalog/rukavicy/rukavicy-hb-brezentovyj-naladonnik/",
+    "name": "Рукавицы х/б с брезентовым наладонником",
+    "shortName": "Рукавицы х/б с брезентом",
+    "sourceName": "Рукавицы хб с брезентовым наладонником",
+    "price": 60,
+    "priceFrom": false,
+    "unit": "пара",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "х/б, наладонник из брезента"
+      ],
+      [
+        "Защита",
+        "от механических и термических повреждений"
+      ],
+      [
+        "Применение",
+        "перемещение грузов, колюще-режущие предметы, сварка"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "rukavicy-hb-brezentovyj-naladonnik",
+    "sourceUrl": "https://www.5ni.ru/rukavitcy/rukavitcy-khb-s-brezentovym-naladonnikom"
+  },
+  {
+    "id": "respirator-lepestok-40-sb",
+    "slug": "respirator-lepestok-40-sb",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-lepestok-40-sb/",
+    "name": "Респиратор Лепесток 40 СБ, FFP2 NR D",
+    "shortName": "Лепесток 40 СБ",
+    "sourceName": "Респиратор Лепесток 40 сб кл a/b/e ffp2 nr d",
+    "price": 75,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D (кл. A/B/E)"
+      ],
+      [
+        "Конструкция",
+        "неформованная полумаска в собранном виде (СБ)"
+      ],
+      [
+        "Слои",
+        "нетканый материал, фильтрующий слой, угольный слой, внутренний слой"
+      ],
+      [
+        "Клапан выдоха",
+        "есть"
+      ],
+      [
+        "Крепление",
+        "регулируемые ленты оголовья, алюминиевый носовой зажим"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "respirator-lepestok-40-sb",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/novyy-tovar"
+  },
+  {
+    "id": "perchatki-nitrilovye-benovy",
+    "slug": "perchatki-nitrilovye-benovy",
+    "sectionSlug": "perchatki",
+    "categorySlug": "odnorazovye",
+    "path": "/katalog/perchatki/odnorazovye/perchatki-nitrilovye-benovy/",
+    "name": "Перчатки нитриловые Benovy Nitrile, 100 пар",
+    "shortName": "Нитриловые Benovy",
+    "sourceName": "Перчатки нитриловые неопудренные BENOVY NITRILE - 100 пар",
+    "brand": "Benovy",
+    "price": 550,
+    "priceFrom": false,
+    "unit": "упаковка",
+    "packNote": "100 пар",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "нитрил, текстурированные"
+      ],
+      [
+        "Пудра",
+        "без пудры"
+      ],
+      [
+        "Цвет",
+        "голубой"
+      ],
+      [
+        "Назначение",
+        "смотровые, нестерильные, одноразовые"
+      ],
+      [
+        "Форма",
+        "плоская, универсальная для обеих рук; валик закатан внутрь"
+      ]
+    ],
+    "standards": [
+      "ГОСТ Р 52239-2004",
+      "РУ № ФСЗ 2012/12488 от 14.02.2018"
+    ],
+    "packaging": [
+      "100 пар в упаковке"
+    ],
+    "image": "perchatki-nitrilovye-benovy",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/benovy-nitrile"
+  },
+  {
+    "id": "perchatki-vinilovye-benovy",
+    "slug": "perchatki-vinilovye-benovy",
+    "sectionSlug": "perchatki",
+    "categorySlug": "odnorazovye",
+    "path": "/katalog/perchatki/odnorazovye/perchatki-vinilovye-benovy/",
+    "name": "Перчатки виниловые Benovy голубые, 100 пар",
+    "shortName": "Виниловые Benovy",
+    "sourceName": "Перчатки виниловые неопудренные Benovy голубые - 100 пар",
+    "brand": "Benovy",
+    "price": 350,
+    "priceFrom": false,
+    "unit": "упаковка",
+    "packNote": "100 пар",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "винил"
+      ],
+      [
+        "Пудра",
+        "без пудры"
+      ],
+      [
+        "Цвет",
+        "голубой"
+      ],
+      [
+        "Контакт с пищевыми продуктами",
+        "разрешён"
+      ],
+      [
+        "Форма",
+        "плоская, универсальная для обеих рук; валик закатан внутрь"
+      ]
+    ],
+    "standards": [],
+    "packaging": [
+      "100 пар в упаковке"
+    ],
+    "image": "perchatki-vinilovye-benovy",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/perchatki-vinilovye-neopudrennye-benovy-golubye"
+  },
+  {
+    "id": "perchatki-benovy-tpe",
+    "slug": "perchatki-benovy-tpe",
+    "sectionSlug": "perchatki",
+    "categorySlug": "odnorazovye",
+    "path": "/katalog/perchatki/odnorazovye/perchatki-benovy-tpe/",
+    "name": "Перчатки Benovy из термопластичного эластомера, 100 пар",
+    "shortName": "Benovy ТПЭ",
+    "sourceName": "Перчатки Benovy из термопластичного эластомера, 100 пар",
+    "brand": "Benovy",
+    "price": 250,
+    "priceFrom": false,
+    "unit": "упаковка",
+    "packNote": "100 пар",
+    "hit": false,
+    "specs": [
+      [
+        "Материал",
+        "термопластичный эластомер (ТПЭ)"
+      ],
+      [
+        "Свойства",
+        "эластичные, высокая тактильная чувствительность"
+      ],
+      [
+        "Назначение",
+        "одноразовые: бьюти-сфера, пищевое производство, быт"
+      ]
+    ],
+    "standards": [],
+    "packaging": [
+      "100 пар в упаковке"
+    ],
+    "image": "perchatki-benovy-tpe",
+    "sourceUrl": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/perchatki-benovy-iz-termoplastichnogo-elastomera-100-par"
+  },
+  {
+    "id": "respirator-spiro-312a",
+    "slug": "respirator-spiro-312a",
+    "sectionSlug": "siz",
+    "categorySlug": "zashchita-dyhaniya",
+    "path": "/katalog/siz/zashchita-dyhaniya/respirator-spiro-312a/",
+    "name": "Респиратор СПИРО-312А FFP2 NR D от сварочных дымов",
+    "shortName": "СПИРО-312А",
+    "sourceName": "Респиратор от сварочных дымов \"СПИРО-312А\" FFP2 NR D",
+    "price": 80,
+    "priceFrom": false,
+    "unit": "шт",
+    "hit": false,
+    "specs": [
+      [
+        "Класс защиты",
+        "FFP2 NR D"
+      ],
+      [
+        "Конструкция",
+        "формованная многослойная полумаска, клапан выдоха"
+      ],
+      [
+        "Слои",
+        "спанбонд, мелтблаун, сорбирующий слой, полиэфирный внутренний слой"
+      ],
+      [
+        "Эффективность фильтрации",
+        "более 94 %"
+      ],
+      [
+        "Защита",
+        "пыль, дым, туман; органические газы и пары (t кип. > 65 °С); сварочные дымы, озон"
+      ],
+      [
+        "Размер",
+        "универсальный"
+      ]
+    ],
+    "standards": [],
+    "packaging": [],
+    "image": "respirator-spiro-312a",
+    "sourceUrl": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-spiro-312a-ffp2-nr-d"
+  }
+]

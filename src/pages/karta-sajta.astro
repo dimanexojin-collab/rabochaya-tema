@@ -1,0 +1,45 @@
+---
+import Page from '../layouts/Page.astro';
+import { sections, categoriesOf, productsOfCategory, productsOfSection, sectionPath, categoryPath, news } from '../data/catalog.ts';
+import { articles } from '../data/articles.ts';
+import { footerNav } from '../lib/nav.ts';
+import { url } from '../lib/paths.ts';
+import { fitDescription, TAILS } from '../lib/seo.ts';
+
+const description = fitDescription('Карта сайта «Рабочая тема»: все разделы и категории каталога, 29 товаров, оптовый прайс, статьи о перчатках, новости и контакты.', ...TAILS);
+---
+<Page title="Карта сайта" description={description} h1="Карта сайта" crumbs={[{ name: 'Карта сайта', href: '/karta-sajta/' }]} cta={false}>
+  <div class="split">
+    <section aria-labelledby="sm-cat">
+      <h2 id="sm-cat"><a href={url('/katalog/')}>Каталог</a></h2>
+      <ul>
+        {sections.map((s) => (
+          <li>
+            <a href={url(sectionPath(s))}>{s.name}</a>
+            <ul>
+              {s.direct
+                ? productsOfSection(s.slug).map((p) => <li><a href={url(p.path)}>{p.name}</a></li>)
+                : categoriesOf(s.slug).map((c) => (
+                    <li>
+                      <a href={url(categoryPath(c))}>{c.name}</a>
+                      <ul>{productsOfCategory(c.slug).map((p) => <li><a href={url(p.path)}>{p.name}</a></li>)}</ul>
+                    </li>
+                  ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section aria-labelledby="sm-pages">
+      <h2 id="sm-pages">Страницы</h2>
+      <ul>
+        <li><a href={url('/')}>Главная</a></li>
+        {footerNav.filter((n) => n.href !== '/katalog/' && n.href !== '/karta-sajta/').map((n) => <li><a href={url(n.href)}>{n.label}</a></li>)}
+      </ul>
+      <h3>Статьи</h3>
+      <ul>{articles.map((a) => <li><a href={url(`/stati/${a.slug}/`)}>{a.title}</a></li>)}</ul>
+      <h3>Новости</h3>
+      <ul>{news.map((n) => <li><a href={url(`/novosti/${n.slug}/`)}>{n.title}</a></li>)}</ul>
+    </section>
+  </div>
+</Page>

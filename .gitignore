@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+.lighthouse/
+.images-sheet/
+
+# рабочие материалы — не публикуются
+PLAN.md
+QUESTIONS.md
+source/

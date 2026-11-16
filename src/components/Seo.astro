@@ -1,0 +1,43 @@
+---
+import { SITE, filled } from '../config/site.ts';
+import { abs } from '../lib/paths.ts';
+import { OG_DEFAULT } from '../lib/seo.ts';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Абсолютный canonical (origin + base + путь). У 404 нет. */
+  canonical?: string;
+  noindex?: boolean;
+  /** Абсолютный URL картинки; по умолчанию — /og/default.jpg под base */
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: 'website' | 'article' | 'product';
+}
+
+const { title, description, canonical, noindex = false, ogType = 'website' } = Astro.props;
+const image = Astro.props.ogImage ?? abs(OG_DEFAULT);
+const imageAlt = Astro.props.ogImageAlt ?? `${SITE.name} — ${SITE.tagline.toLowerCase()}`;
+const isDefault = !Astro.props.ogImage;
+const { yandexVerification, googleVerification } = SITE.analytics;
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+{canonical && <link rel="canonical" href={canonical} />}
+{noindex && <meta name="robots" content="noindex, follow" />}
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+{canonical && <meta property="og:url" content={canonical} />}
+<meta property="og:image" content={image} />
+{isDefault && <meta property="og:image:width" content="1200" />}
+{isDefault && <meta property="og:image:height" content="630" />}
+<meta property="og:image:alt" content={imageAlt} />
+<meta name="twitter:card" content={isDefault ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+{filled(yandexVerification) && <meta name="yandex-verification" content={yandexVerification} />}
+{filled(googleVerification) && <meta name="google-site-verification" content={googleVerification} />}

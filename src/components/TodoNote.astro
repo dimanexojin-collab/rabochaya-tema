@@ -1,0 +1,7 @@
+---
+/** Заглушка для незаполненных данных (TODO в site.ts). При STRICT=1 сборка с TODO в обязательных полях не пройдёт. */
+interface Props {
+  what: string;
+}
+---
+<span class="todo-note" data-todo>{Astro.props.what} уточняется</span>

@@ -1,0 +1,42 @@
+---
+/**
+ * Заявка без бэкенда: поля → кнопка открывает mailto: с темой и текстом (encodeURIComponent в motion.ts),
+ * рядом — копируемый шаблон письма и телефоны. Данные со страницы никуда не отправляются.
+ * Без JS форма уходит обычным mailto: (method=post, enctype=text/plain), плюс видны прямые ссылки.
+ */
+import { SITE, mainPhone } from '../config/site.ts';
+
+interface Props {
+  /** Название товара — подставляется в «Что нужно» */
+  item?: string;
+  id?: string;
+}
+const { item = '', id = 'zayavka' } = Astro.props;
+const phone = mainPhone();
+const template = `Тема: Заявка с сайта: ${item || 'рабочие перчатки'}
+
+Что нужно: ${item}
+Количество:
+Организация и реквизиты:
+Доставка: нужна / самовывоз
+Контакт:`;
+---
+<section class="section" id={id} aria-labelledby={`${id}-title`}>
+  <h2 id={`${id}-title`}>Заявка на счёт или прайс</h2>
+  <p>Заполните поля — откроется ваш почтовый клиент с готовым письмом на <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Мы выставим счёт для оплаты по безналичному расчёту с НДС. Удобнее голосом — звоните <a href={phone.href}>{phone.display}</a>.</p>
+  <form class="lead-form" data-lead data-email={SITE.email} action={`mailto:${SITE.email}`} method="post" enctype="text/plain" data-reveal>
+    <label>Что нужно<input name="item" value={item} placeholder="Например: перчатки с ПВХ 10 класс, серые" /></label>
+    <label>Количество<input name="qty" placeholder="Например: 3 мешка по 300 пар" /></label>
+    <label>Организация и реквизиты<textarea name="org" placeholder="Название, ИНН — для счёта"></textarea></label>
+    <label>Доставка<select name="delivery"><option>Нужна доставка</option><option>Самовывоз</option><option>Обсудим</option></select></label>
+    <label>Контакт для ответа<input name="contact" placeholder="Телефон или e-mail" autocomplete="off" /></label>
+    <label>Комментарий<textarea name="comment"></textarea></label>
+    <div class="btn-row">
+      <button class="btn btn--ink" type="submit">Открыть письмо</button>
+      <button class="btn btn--ghost" type="button" data-copy>Скопировать текст</button>
+      <a class="btn btn--ghost" href={phone.href}>Позвонить</a>
+    </div>
+    <p class="caption muted">Шаблон письма — можно скопировать и отправить с любой почты:</p>
+    <pre class="lead-form__template" data-template>{template}</pre>
+  </form>
+</section>

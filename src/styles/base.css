@@ -1,0 +1,35 @@
+/* База: сброс, типографика, контейнер, доступность. Финальная полировка — components.css. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 32px); }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: var(--fw-regular) var(--text-body) / var(--lh-body) var(--font);
+  letter-spacing: var(--tracking);
+  font-feature-settings: var(--features);
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { margin: 0 0 var(--s-16); font-weight: var(--fw-bold); letter-spacing: var(--tracking); }
+h1 { font-size: var(--text-display); line-height: var(--lh-display); }
+h2 { font-size: var(--text-h2); line-height: var(--lh-h2); }
+h3 { font-size: var(--text-h3); line-height: var(--lh-h3); }
+p, ul, ol, dl { margin: 0 0 var(--s-16); }
+p, li { max-width: var(--measure); }
+a { color: inherit; text-underline-offset: .2em; }
+img, svg, picture { display: block; max-width: 100%; height: auto; }
+button, input, select, textarea { font: inherit; letter-spacing: inherit; color: inherit; }
+table { border-collapse: collapse; width: 100%; }
+.num, .price, td.price { font-variant-numeric: tabular-nums; }
+
+.container { width: 100%; max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.section { margin-block: var(--section-gap); }
+.lead { font-size: var(--text-sub); line-height: var(--lh-sub); max-width: var(--measure); }
+.muted { color: var(--ink-60); }
+.caption { font-size: var(--text-caption); line-height: var(--lh-caption); }
+
+.skip-link { position: absolute; left: var(--s-16); top: -100px; z-index: 100; padding: var(--s-12) var(--s-24); background: var(--surface); border: var(--hairline); border-radius: var(--r-pill); }
+.skip-link:focus { top: var(--s-16); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+main:focus { outline: none; }

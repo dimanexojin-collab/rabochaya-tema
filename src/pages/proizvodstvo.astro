@@ -1,0 +1,50 @@
+---
+import { Picture } from 'astro:assets';
+import Page from '../layouts/Page.astro';
+import SerialGallery from '../components/SerialGallery.astro';
+import { SITE, isTodo } from '../config/site.ts';
+import { img, alt, WIDTHS } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { fitDescription, TAILS } from '../lib/seo.ts';
+import TodoNote from '../components/TodoNote.astro';
+
+const title = 'Производство рабочих перчаток в Архангельске';
+const description = fitDescription(
+  'Вяжем трикотажные рабочие перчатки 7 и 10 класса с ПВХ и без из китайской, вьетнамской и индонезийской пряжи. Цех и офис — в Архангельске.',
+  ...TAILS,
+);
+---
+<Page title={title} description={description} h1="О производстве" crumbs={[{ name: 'Производство', href: '/proizvodstvo/' }]}
+  lead="«Рабочая тема» — производитель рабочих перчаток. Предприятие, офис и цех находятся в Архангельске, так что качество можно проверить лично.">
+  <figure class="media-round" data-reveal>
+    <Picture src={img('ceh')} alt={alt('ceh')} formats={['avif', 'webp']} widths={[...WIDTHS.large]} sizes="(min-width: 1232px) 1200px, 100vw" loading="eager" decoding="async" />
+  </figure>
+
+  <section class="section prose" aria-labelledby="what">
+    <h2 id="what">Что мы выпускаем</h2>
+    <p>Хлопчатобумажные трикотажные перчатки с ПВХ-покрытием и без него — незаменимые на строительных, сельскохозяйственных и других работах. Состав хлопка и полиэстера зависит от класса вязки.</p>
+    <p><strong>7 (7,5) класс</strong> — обычная плотность: самые толстые и прочные перчатки, лучше всего защищают руки от механических повреждений. <strong>10 класс</strong> — повышенная плотность на более тонкой пряже: перчатки защищают от производственных загрязнений и сохраняют чувствительность рук, поэтому их берут ремонтные мастерские, сборочные цеха, лаборатории.</p>
+    <p>Оба класса вяжем из китайской, вьетнамской и индонезийской пряжи. Наши перчатки недорогие, но надёжные.</p>
+    <p>Освоены перчатки 10 класса с платировкой, плотные «семинитки» для тяжёлых работ, двойные перчатки на холодный сезон и цветные перчатки. Под заказ вяжем другие размеры и плотность.</p>
+    <p>Сертификаты и декларации: {isTodo(SITE.certificates) ? <TodoNote what="информация о документах" /> : SITE.certificates}</p>
+  </section>
+
+  <section class="section" aria-labelledby="serial">
+    <h2 id="serial">Серийные позиции</h2>
+    <SerialGallery />
+    <p><a href={url('/optom/')}>Цены на серийные позиции — в оптовом прайсе</a></p>
+  </section>
+
+  <figure class="section media-round" data-reveal>
+    <Picture src={img('banner')} alt={alt('banner')} formats={['avif', 'webp']} widths={[640, 960, 1280, 1920]} sizes="(min-width: 1232px) 1200px, 100vw" loading="lazy" decoding="async" />
+  </figure>
+
+  <section class="section prose" aria-labelledby="more">
+    <h2 id="more">Полезно знать</h2>
+    <ul>
+      <li><a href={url('/stati/klass-vyazki-7-i-10/')}>Чем 7 класс вязки отличается от 10</a></li>
+      <li><a href={url('/stati/teks-i-nomer-pryazhi/')}>Текс, номер пряжи и «нитки»</a></li>
+      <li><a href={url('/stati/kak-formiruetsya-cena/')}>От чего зависит цена перчаток</a></li>
+    </ul>
+  </section>
+</Page>

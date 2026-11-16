@@ -1,0 +1,23 @@
+---
+/** Полоса CTA (sand): запрос прайса / счёта без бэкенда — tel: и mailto:. */
+import { SITE, mainPhone } from '../config/site.ts';
+import { url } from '../lib/paths.ts';
+
+interface Props {
+  subject?: string;
+}
+const subject = Astro.props.subject ?? 'Запрос прайса на рабочие перчатки';
+const phone = mainPhone();
+const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
+---
+<section class="cta-band container" aria-labelledby="cta-title">
+  <div class="cta-band__inner" data-reveal>
+    <h2 id="cta-title">Нужен прайс или счёт с НДС?</h2>
+    <p>Напишите, какие перчатки и сколько нужно, — пришлём цены и выставим счёт. Или позвоните: {phone.display}.</p>
+    <div class="btn-row">
+      <a class="btn" href={mailto} data-magnetic>Запросить прайс</a>
+      <a class="btn btn--ghost" href={phone.href}>Позвонить</a>
+      <a class="btn btn--ghost" href={url('/kontakty/#zayavka')}>Составить заявку</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import { Picture } from 'astro:assets';
+import type { NewsItem } from '../data/catalog.ts';
+import { newsCopy } from '../data/copy/news.ts';
+import { img, alt } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { formatDate } from '../lib/format.ts';
+import { newsStatus } from '../lib/news.ts';
+
+interface Props {
+  item: NewsItem;
+  level?: 2 | 3;
+}
+const { item: n, level = 2 } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
+const imageId = n.thumb ?? n.images[0];
+const status = newsStatus(n);
+---
+<article class="card news-card" data-reveal>
+  {imageId && (
+    <div class="news-card__img">
+      <Picture src={img(imageId)} alt={alt(imageId)} formats={['avif', 'webp']} widths={[360, 540, 720]} sizes="(min-width: 1080px) 380px, (min-width: 600px) 45vw, 90vw" loading="lazy" decoding="async" />
+    </div>
+  )}
+  <p class="caption muted"><time datetime={n.date}>{formatDate(n.date)}</time>{status && <> · <span class="status">{status}</span></>}</p>
+  <H class="product-card__title"><a class="card__link" href={url(`/novosti/${n.slug}/`)}>{n.title}</a></H>
+  <p>{newsCopy[n.slug].lead}</p>
+</article>

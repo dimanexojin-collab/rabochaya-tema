@@ -1,0 +1,38 @@
+---
+/** Карточка товара: фото contain на белом (превью ≤ 270 px увеличены конвейером до 800 px), бейдж, название, цена. */
+import { Picture } from 'astro:assets';
+import type { Product } from '../data/catalog.ts';
+import { img, WIDTHS } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { productPrice, unitText } from '../lib/format.ts';
+
+interface Props {
+  product: Product;
+  /** Заголовок уровня (h2 в списках категорий, h3 — внутри секций) */
+  level?: 2 | 3;
+  eager?: boolean;
+  /** первая карточка над сгибом — кандидат в LCP: fetchpriority=high */
+  priority?: boolean;
+}
+const { product: p, level = 3, eager = false, priority = false } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
+const unit = unitText(p);
+---
+<article class="card product-card" data-reveal>
+  {p.hit && <span class="badge">Хит продаж</span>}
+  <div class="product-card__img">
+    <Picture
+      src={img(p.image)}
+      alt={p.name}
+      formats={['avif', 'webp']}
+      widths={[...WIDTHS.card]}
+      sizes="(min-width: 480px) min(40vw, 260px), 260px"
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={priority ? 'high' : undefined}
+      decoding="async"
+      style={`view-transition-name: p-${p.slug}`}
+    />
+  </div>
+  <H class="product-card__title"><a class="card__link" href={url(p.path)}>{p.name}</a></H>
+  <p class="product-card__price"><span class="price" data-price={p.price}>{productPrice(p)}</span>{unit && <span class="muted"> / {unit.replace(/^за /, '')}</span>}</p>
+</article>

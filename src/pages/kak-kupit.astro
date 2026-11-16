@@ -1,0 +1,42 @@
+---
+import Page from '../layouts/Page.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import LeadForm from '../components/LeadForm.astro';
+import TodoNote from '../components/TodoNote.astro';
+import { SITE, isTodo, mainPhone } from '../config/site.ts';
+import { faqOrder } from '../data/faq.ts';
+import { url } from '../lib/paths.ts';
+import { fitDescription, TAILS } from '../lib/seo.ts';
+import { faqPage } from '../lib/schema.ts';
+
+const phone = mainPhone();
+const title = 'Как заказать: счёт с НДС, оплата, доставка';
+const description = fitDescription(
+  `Как купить рабочие перчатки: заявка на ${SITE.email}, счёт с НДС 20 % для безналичной оплаты или покупка за наличные в отделе на пр. Ломоносова, 88.`,
+  ...TAILS,
+);
+---
+<Page title={title} description={description} h1="Доставка и оплата" crumbs={[{ name: 'Доставка и оплата', href: '/kak-kupit/' }]}
+  lead="Знаете, какие перчатки нужны? Отправьте заявку — мы выставим счёт. Или купите за наличные в розничном отделе." jsonLd={[faqPage(faqOrder)]} cta={false}>
+  <section class="section prose" aria-labelledby="order">
+    <h2 id="order">Заказ и счёт для организаций</h2>
+    <ol>
+      <li>Напишите на <a href={`mailto:${SITE.email}`}>{SITE.email}</a>: вид и количество перчаток, реквизиты организации, контакт и нужна ли доставка.</li>
+      <li>Мы выставим счёт. Работаем по безналичному расчёту с НДС 20 %.</li>
+      <li>Заказ можно сделать и по телефону <a href={phone.href}>{phone.display}</a>.</li>
+    </ol>
+  </section>
+  <section class="section prose" aria-labelledby="cash">
+    <h2 id="cash">Покупка за наличные</h2>
+    <p>В розничном отделе «{SITE.retailName}»: {SITE.address.locality}, {SITE.address.street}. Телефон отдела — <a href={SITE.phones[0].href}>{SITE.phones[0].display}</a>.</p>
+    <p>График работы: {isTodo(SITE.hours) ? <TodoNote what="график" /> : SITE.hours}</p>
+  </section>
+  <section class="section prose" aria-labelledby="delivery">
+    <h2 id="delivery">Доставка</h2>
+    <p>Укажите в заявке, нужна ли доставка, — условия согласуем при выставлении счёта.</p>
+    <p>{isTodo(SITE.delivery) ? <TodoNote what="Порядок доставки (способы, сроки, стоимость)" /> : SITE.delivery}</p>
+    <p>Цены — в <a href={url('/optom/')}>оптовом прайсе</a> и в <a href={url('/katalog/')}>каталоге</a>.</p>
+  </section>
+  <FaqAccordion items={faqOrder} title="Вопросы о заказе" id="faq-order" />
+  <LeadForm />
+</Page>

@@ -1,0 +1,25 @@
+---
+/** Плитка категории/раздела: фото категории (или первого товара), название, число товаров и цена «от». */
+import { Picture } from 'astro:assets';
+import { img, alt } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { formatFrom, plural, PRODUCT_FORMS } from '../lib/format.ts';
+
+interface Props {
+  name: string;
+  href: string;
+  imageId: string;
+  count: number;
+  from: number;
+  level?: 2 | 3;
+}
+const { name, href, imageId, count, from, level = 3 } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
+---
+<article class="card card--sand tile" data-reveal>
+  <div class="tile__img">
+    <Picture src={img(imageId)} alt={alt(imageId)} formats={['avif', 'webp']} widths={[240, 360, 480]} sizes="(min-width: 1080px) 260px, 45vw" loading="lazy" decoding="async" />
+  </div>
+  <H class="product-card__title"><a class="card__link" href={url(href)}>{name}</a></H>
+  <p class="product-card__price">{count} {plural(count, PRODUCT_FORMS)} · <span class="price" data-price={from}>{formatFrom(from)}</span></p>
+</article>

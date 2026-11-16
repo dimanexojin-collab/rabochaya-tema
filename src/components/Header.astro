@@ -1,0 +1,59 @@
+---
+/** Шапка-пилюля: словесный знак, меню (каталог с подменю), телефон, «Запросить прайс». Мобильное меню — <details>. */
+import { SITE, mainPhone } from '../config/site.ts';
+import { mainNav, isActive } from '../lib/nav.ts';
+import { url, stripBase } from '../lib/paths.ts';
+
+const path = stripBase(Astro.url.pathname);
+const current = (href: string) => (path === href ? 'page' : isActive(href, path) ? 'true' : undefined);
+const phone = mainPhone();
+---
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href={url('/')} aria-label={`${SITE.name} — на главную`}>{SITE.name}</a>
+
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul>
+        {mainNav.map((item) => (
+          <li class:list={{ 'has-children': !!item.children }}>
+            <a href={url(item.href)} aria-current={current(item.href)}>{item.label}{item.children && <span aria-hidden="true"> ▾</span>}</a>
+            {item.children && (
+              <ul class="submenu">
+                {item.children.map((s) => (
+                  <li class="submenu-group">
+                    <a href={url(s.href)} aria-current={current(s.href)}>{s.label}</a>
+                    {s.children && s.children.length > 0 && (
+                      <ul>{s.children.map((c) => <li><a href={url(c.href)} aria-current={current(c.href)}>{c.label}</a></li>)}</ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-actions__phone" href={phone.href}>{phone.display}</a>
+      <a class="btn" href={url('/kontakty/#zayavka')} data-magnetic>Запросить прайс</a>
+    </div>
+
+    <details class="mobile-nav">
+      <summary aria-label="Открыть меню">Меню</summary>
+      <nav aria-label="Мобильная навигация">
+        <ul>
+          {mainNav.map((item) => (
+            <li>
+              <a href={url(item.href)} aria-current={current(item.href)}>{item.label}</a>
+              {item.children && (
+                <ul>{item.children.map((s) => <li><a href={url(s.href)}>{s.label}</a></li>)}</ul>
+              )}
+            </li>
+          ))}
+        </ul>
+        <p><a href={phone.href}>{phone.display}</a></p>
+      </nav>
+    </details>
+  </div>
+</header>

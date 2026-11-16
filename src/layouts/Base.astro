@@ -1,0 +1,101 @@
+---
+/**
+ * Базовый layout: <head> (SEO, CSP-meta, шрифт, иконки, manifest, JSON-LD), шапка, <main>, футер.
+ * Все ссылки на файлы public/ — через url() (учитывает base), ассеты — через импорт (Vite добавляет base сам).
+ */
+import interCyr from '../assets/fonts/inter-cyr.woff2?url';
+import interLat from '../assets/fonts/inter-lat.woff2?url';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/components.css';
+import '../styles/motion.css';
+import Seo from '../components/Seo.astro';
+import JsonLd from '../components/JsonLd.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, mainPhone } from '../config/site.ts';
+import { url, abs, stripBase } from '../lib/paths.ts';
+import { isNoindex } from '../lib/noindex.ts';
+import { unicodeRange } from '../lib/fonts.ts';
+import { organization, store, website, breadcrumbs, type Crumb, type JsonLd as Ld } from '../lib/schema.ts';
+
+export interface Props {
+  title: string;
+  description: string;
+  crumbs?: Crumb[];
+  jsonLd?: (Ld | null | false)[];
+  noindex?: boolean;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: 'website' | 'article' | 'product';
+}
+
+const { title, description, crumbs, jsonLd = [], ogImage, ogImageAlt, ogType } = Astro.props;
+const path = stripBase(Astro.url.pathname);
+const is404 = path === '/404/';
+const noindex = Astro.props.noindex ?? isNoindex(path);
+const canonical = is404 ? undefined : abs(path);
+const phone = mainPhone();
+
+// font-display: swap + preload обоих сабсетов: Inter показывается всегда (а не «если успел», как при optional).
+// Чтобы подмена не сдвигала вёрстку (CLS = 0), запасной Arial подогнан под Inter отдельно для обычного/жирного
+// начертания и для кириллицы/латиницы (unicode-range как у сабсетов): size-adjust = ширина текста сайта в Inter /
+// в Arial (замер canvas.measureText по 6 ключевым страницам), ascent/descent = метрики Inter ÷ size-adjust.
+// Liberation Sans и Arimo метрически совместимы с Arial (Linux/ChromeOS).
+const INTER_ASC = 0.96875, INTER_DESC = 0.2412;
+const FALLBACK_FIT = [
+  { weight: '100 549', src: "local('Arial'),local('ArialMT'),local('Liberation Sans'),local('Arimo')", cyr: 1.0699, lat: 1.0338 },
+  { weight: '550 900', src: "local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('Arimo Bold')", cyr: 1.0349, lat: 0.99 },
+];
+const pct = (n: number) => `${(n * 100).toFixed(2)}%`;
+const fallbackFaces = FALLBACK_FIT.flatMap((f) =>
+  (['cyr', 'lat'] as const).map((r) =>
+    `@font-face{font-family:'Inter Fallback';font-style:normal;font-weight:${f.weight};src:${f.src};unicode-range:${unicodeRange(r)};size-adjust:${pct(f[r])};ascent-override:${pct(INTER_ASC / f[r])};descent-override:${pct(INTER_DESC / f[r])};line-gap-override:0%;}`,
+  ),
+).join('\n');
+const fontFaces = `
+@font-face{font-family:'Inter Variable';font-style:normal;font-display:swap;font-weight:100 900;src:url(${interCyr}) format('woff2');unicode-range:${unicodeRange('cyr')};}
+@font-face{font-family:'Inter Variable';font-style:normal;font-display:swap;font-weight:100 900;src:url(${interLat}) format('woff2');unicode-range:${unicodeRange('lat')};}
+${fallbackFaces}
+`;
+// CSP через meta (на GitHub Pages заголовки задать нельзя). Внешних запросов нет.
+const csp = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'";
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content={csp} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    {/* html.m — движение включено (нет reduced-motion); страховка: без motion.ts за 4 с класс снимается */}
+    <script is:inline>(function(d){d.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('m');setTimeout(function(){if(!window.__rt)d.classList.remove('m')},4000)})(document.documentElement)</script>
+    <Seo title={title} description={description} canonical={canonical} noindex={noindex} ogImage={ogImage} ogImageAlt={ogImageAlt} ogType={ogType} />
+    <meta name="theme-color" content="#ebeadf" />
+    <link rel="icon" href={url('/favicon.ico')} sizes="32x32" />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
+    <link rel="manifest" href={url('/site.webmanifest')} />
+    <link rel="sitemap" href={url('/sitemap-index.xml')} />
+    <link rel="preload" href={interCyr} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interLat} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={fontFaces}></style>
+    <JsonLd data={[organization(), store(), website(), crumbs && crumbs.length > 1 ? breadcrumbs(crumbs) : null, ...jsonLd]} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <Header />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <nav class="quickbar" aria-label="Быстрая связь">
+      <a class="btn btn--accent" href={phone.href}>Позвонить</a>
+      <a class="btn" href={`mailto:${SITE.email}`}>Написать</a>
+    </nav>
+    <script>
+      import '../scripts/motion.ts';
+    </script>
+  </body>
+</html>

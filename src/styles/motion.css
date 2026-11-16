@@ -1,0 +1,128 @@
+/* Движение. Скрытые состояния — только под html.m (ставит инлайн-скрипт, если нет reduced-motion).
+   Без JS контент виден сразу. Анимируем transform / translate / scale / opacity / filter.
+   Без теней и сплошных заливок-переходов: глубина — только тон поверхности и рамка. */
+:root { --ease-spring: cubic-bezier(.34, 1.56, .64, 1); }
+
+/* ---------- Hero: слова из размытия в резкость (≤ 600 мс, старт с .15 — LCP не прячется) ---------- */
+@keyframes m-blur { from { opacity: .15; filter: blur(12px); transform: translateY(.3em); } }
+@keyframes m-rise { from { opacity: .15; filter: blur(8px); transform: translateY(16px); } }
+.hero .w { display: inline-block; }
+html.m .hero .w { animation: m-blur .36s var(--ease-out) both; animation-delay: calc(var(--b, 0ms) + var(--i, 0) * var(--st, 40ms)); }
+html.m .hero .hero__lead { --b: 80ms; }
+html.m .hero :is(.hero__rot, .btn-row) { animation: m-blur .3s var(--ease-out) .3s both; }
+html.m .featured { animation: m-rise .45s var(--ease-out) .12s both; }
+html.m .hero.is-off :is(.w, .hero__rot, .btn-row, .featured) { animation: none; }
+
+/* ротатор категорий: печать с кареткой; смена без opacity — только размытие и сдвиг (контраст не падает) */
+.hero__rot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-8); font-size: var(--text-small); }
+.rot {
+  display: inline-flex; align-items: center; width: min(100%, 17.5em); height: 36px; padding: 0 var(--s-16); overflow: hidden;
+  border: var(--hairline); border-radius: var(--r-pill); background: var(--canvas); font-weight: var(--fw-bold); white-space: nowrap;
+}
+.rot__t { display: inline-block; min-width: .63em; padding-right: 2px; border-right: 2px solid transparent; transition: filter .3s, transform .3s var(--ease-out); }
+html.m .rot__t { border-right-color: var(--coral); animation: m-caret 1s steps(1) infinite; }
+.rot__t.is-out { filter: blur(8px); transform: translateY(-6px) scale(.96); }
+@keyframes m-caret { 50% { border-right-color: transparent; } }
+
+/* парение картинки/бейджа и параллакс карточек (--px/--py ∈ [-1; 1] ставит motion.ts) */
+.hero__card { translate: calc(var(--px, 0) * -6px) calc(var(--py, 0) * -5px); transition: translate .7s var(--ease-out); }
+.featured { translate: calc(var(--px, 0) * 8px) calc(var(--py, 0) * 6px); transition: translate .7s var(--ease-out); }
+html.m .featured__img img { animation: m-float 6s ease-in-out infinite; }
+html.m .hero__media > picture img { animation: m-breathe 16s ease-in-out infinite; }
+@keyframes m-float { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-10px) rotate(1.5deg); } }
+@keyframes m-breathe { 50% { transform: scale(1.04); } }
+
+/* коралловый бейдж: лёгкая пульсация масштабом (не свечение) */
+html.m .badge { animation: m-pulse 2.8s var(--ease-out) infinite; }
+@keyframes m-pulse { 0%, 30%, 100% { scale: 1; } 12% { scale: 1.07; } }
+
+/* ---------- Scroll-reveal: повторяется при каждом возврате в экран (класс .in ставит/снимает motion.ts) ---------- */
+html.m [data-reveal] {
+  transition: opacity .7s var(--ease-out) var(--d, 0ms), translate .8s var(--ease-out) var(--d, 0ms), filter .7s var(--ease-out) var(--d, 0ms),
+    transform .4s var(--ease-out), border-color .25s, background-color .25s;
+}
+html.m [data-reveal]:not(.in) { opacity: 0; translate: 0 22px; filter: blur(10px); }
+html.m tr[data-reveal]:not(.in) { translate: -12px 0; filter: blur(6px); }
+
+/* заголовок внутренней страницы и крошки: короткий blur-in, LCP виден сразу */
+html.m :is(.breadcrumbs ol, .page-head > *) { animation: m-blur .5s var(--ease-out) both; }
+html.m .page-head > * { animation-delay: .06s; }
+html.m .page-head > * + * { animation-delay: .14s; }
+
+/* count-up цены: недостающие разряды — невидимые нули, ширина текста постоянна */
+.pz { visibility: hidden; }
+
+/* ---------- Карточки: подъём/tilt только на устройствах с hover ---------- */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :is(.product-card, .news-card, .tile) { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--ty, 0px)); }
+  :is(.product-card, .news-card, .tile):hover { --ty: -6px; }
+  .tile:hover { background: var(--surface); }
+  :is(.product-card__img, .tile__img, .news-card__img) img { transition: scale .6s var(--ease-out); }
+  :is(.product-card, .tile, .news-card):hover :is(.product-card__img, .tile__img, .news-card__img) img { scale: 1.05; }
+  .price-table tbody tr:not(:has(th[scope="rowgroup"])):hover { background: var(--sand); }
+}
+.news-card__img { overflow: hidden; border-radius: var(--r-card); margin-bottom: var(--s-16); }
+.news-card__img img { margin-bottom: 0; }
+
+/* ---------- 3D-лента категорий (класс is-3d ставит motion.ts; без JS — горизонтальный скролл) ---------- */
+.ribbon { padding-top: var(--s-8); }
+.ribbon.is-3d { overflow: hidden; scroll-snap-type: none; }
+.ribbon.is-3d > li { will-change: transform; }
+
+/* ---------- Пилюли: пружинный hover, нажатие, магнит, ripple ---------- */
+.btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  translate: var(--mx, 0px) calc(var(--my, 0px) + var(--ly, 0px));
+  transition: transform .2s var(--ease-out), translate .5s var(--ease-spring), background-color .2s, color .2s;
+}
+.btn:hover { --ly: -2px; }
+.btn:active { transform: scale(.95); }
+.ripple { position: absolute; z-index: -1; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: currentColor; opacity: 0; pointer-events: none; animation: m-ripple .6s var(--ease-out); }
+@keyframes m-ripple { from { opacity: .2; scale: 1; } to { opacity: 0; scale: var(--rs, 10); } }
+
+/* ---------- Ссылки: подчёркивание выезжает снизу ---------- */
+:is(.site-footer, .breadcrumbs) a, .wordmark, .header-actions__phone {
+  text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: transparent; text-underline-offset: .5em;
+  transition: text-decoration-color .3s, text-underline-offset .3s var(--ease-out);
+}
+:is(.site-footer, .breadcrumbs) a:hover, .wordmark:hover, .header-actions__phone:hover { text-decoration-color: currentColor; text-underline-offset: .2em; }
+main :is(p, li, dd) > a:not(.btn, .rot) { transition: text-decoration-color .3s, text-underline-offset .3s var(--ease-out), text-decoration-thickness .3s; }
+main :is(p, li, dd) > a:not(.btn, .rot):hover { text-decoration-color: var(--coral); text-decoration-thickness: 3px; text-underline-offset: .3em; }
+.main-nav a { transition: background-color .25s; }
+.main-nav .has-children:is(:hover, :focus-within) > .submenu { animation: m-drop .3s var(--ease-out); }
+@keyframes m-drop { from { opacity: 0; translate: 0 -6px; } }
+
+/* ---------- Шапка, прогресс скролла, мобильная панель связи ---------- */
+.site-header { transition: translate .45s var(--ease-out); }
+.site-header.is-hidden { translate: 0 calc(-100% - 24px); }
+.scroll-progress { position: fixed; z-index: 50; top: 0; left: 0; right: 0; height: 3px; background: var(--coral); transform-origin: 0 50%; scale: var(--sp, 0) 1; pointer-events: none; }
+@supports (animation-timeline: scroll()) {
+  .scroll-progress { animation: m-progress linear both; animation-timeline: scroll(root); }
+  @keyframes m-progress { from { scale: 0 1; } to { scale: 1 1; } }
+}
+html.m .quickbar { animation: m-up .6s var(--ease-out) .4s both; }
+@keyframes m-up { from { translate: 0 calc(100% + 16px); } }
+html.m .mobile-nav[open] nav { animation: m-drop .3s var(--ease-out); }
+
+/* ---------- FAQ: плавная высота ---------- */
+.faq { interpolate-size: allow-keywords; }
+.faq summary::after { transition: rotate .35s var(--ease-out), background-color .25s; }
+.faq details[open] summary::after { rotate: 180deg; }
+.faq details::details-content { block-size: 0; overflow-y: clip; transition: block-size .45s var(--ease-out), content-visibility .45s allow-discrete; }
+.faq details[open]::details-content { block-size: auto; }
+.faq__a { transition: opacity .4s .05s, translate .45s var(--ease-out); }
+.faq details:not([open]) .faq__a { opacity: 0; translate: 0 -6px; }
+
+/* ---------- Переходы между страницами (cross-document View Transitions; ссылки уже с base) ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-out .2s var(--ease-out) both; }
+::view-transition-new(root) { animation: vt-in .35s var(--ease-out) both; }
+@keyframes vt-out { to { opacity: 0; filter: blur(6px); } }
+@keyframes vt-in { from { opacity: 0; filter: blur(8px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .scroll-progress { display: none; }
+  .hero__card, .featured { translate: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

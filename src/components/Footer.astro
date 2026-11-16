@@ -1,0 +1,39 @@
+---
+/** Футер (sand): NAP, ИНН, телефоны, навигация. Меню доступно и без JS. */
+import { Picture } from 'astro:assets';
+import { SITE, fullAddress, isTodo } from '../config/site.ts';
+import { footerNav, catalogNav } from '../lib/nav.ts';
+import { url } from '../lib/paths.ts';
+import { img, alt } from '../lib/images.ts';
+import TodoNote from './TodoNote.astro';
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <Picture class="site-footer__logo" src={img('logo')} alt={alt('logo')} formats={['avif', 'webp']} widths={[220, 440]} sizes="220px" loading="lazy" decoding="async" />
+        <p><strong>{SITE.name}</strong> — {SITE.tagline.toLowerCase()}.</p>
+        <address>
+          <p>{fullAddress()}</p>
+          <ul class="contact-list">
+            {SITE.phones.map((p) => <li>{p.label}: <a href={p.href}>{p.display}</a></li>)}
+            <li>E-mail: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li>График: {isTodo(SITE.hours) ? <TodoNote what="график работы" /> : SITE.hours}</li>
+          </ul>
+        </address>
+      </div>
+      <nav aria-label="Каталог в подвале">
+        <h2 class="caption">Каталог</h2>
+        <ul>{catalogNav.map((s) => <li><a href={url(s.href)}>{s.label}</a></li>)}</ul>
+      </nav>
+      <nav aria-label="Разделы сайта">
+        <h2 class="caption">Покупателям</h2>
+        <ul>{footerNav.map((s) => <li><a href={url(s.href)}>{s.label}</a></li>)}</ul>
+      </nav>
+    </div>
+    <p class="site-footer__legal">
+      © {new Date().getFullYear()} {SITE.legal.entity}, ИНН {SITE.legal.inn}. Цены указаны в рублях с НДС и не являются публичной офертой.
+      <a href={url('/politika-konfidencialnosti/')}>Политика конфиденциальности</a>
+    </p>
+  </div>
+</footer>

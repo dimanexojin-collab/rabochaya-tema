@@ -1,0 +1,27 @@
+---
+/** Прайс складских позиций: семантическая таблица, группы — rowgroup, цены с НДС из data/price.json. */
+import { priceGroups, priceNote } from '../data/catalog.ts';
+import { formatFrom } from '../lib/format.ts';
+---
+<div class="price-card">
+  <table class="price-table">
+    <caption class="visually-hidden">Прайс на складские позиции. {priceNote}</caption>
+    <thead>
+      <tr><th scope="col">Наименование</th><th scope="col">Текс</th><th scope="col">Цена с НДС, за пару</th><th scope="col">В мешке</th></tr>
+    </thead>
+    {priceGroups.map((g) => (
+      <tbody id={g.id}>
+        <tr><th scope="rowgroup" colspan="4">{g.title}{g.colors && <span class="muted"> — {g.colors}</span>}</th></tr>
+        {g.rows.map((r) => (
+          <tr id={r.id} data-reveal>
+            <th scope="row">{r.name}</th>
+            <td class="num" data-label="Текс">{r.tex ?? '—'}</td>
+            <td class="price" data-label="Цена с НДС, за пару" data-price={r.priceFrom ?? undefined}>{r.priceFrom !== null ? formatFrom(r.priceFrom) : 'по запросу'}</td>
+            <td data-label="В мешке">{r.bag}</td>
+          </tr>
+        ))}
+      </tbody>
+    ))}
+  </table>
+  <p class="caption muted">{priceNote}. «от» — минимальная цена позиции; итог зависит от объёма, размера и предоплаты.</p>
+</div>

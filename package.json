@@ -1,0 +1,35 @@
+{
+  "name": "rabochaya-tema",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-todo.mjs --summary && astro check && astro build",
+    "build:fast": "astro build",
+    "preview": "astro preview",
+    "check:todo": "node scripts/check-todo.mjs",
+    "data": "node scripts/build-data.mjs",
+    "images": "node scripts/images-upscale.mjs",
+    "images:sheet": "node scripts/images-sheet.mjs",
+    "images:esrgan": "node scripts/fetch-realesrgan.mjs",
+    "assets": "node scripts/prepare-assets.mjs",
+    "assets:fonts": "node scripts/subset-fonts.mjs",
+    "audit": "node scripts/audit-seo.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.5",
+    "@fontsource-variable/inter": "^5.2.8",
+    "astro": "^7.4.12",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "lighthouse": "^13.6.0",
+    "node-html-parser": "^9.0.7",
+    "subset-font": "^2.9.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,18 @@
+---
+import Page from '../../layouts/Page.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import { news } from '../../data/catalog.ts';
+import { fitDescription, TAILS } from '../../lib/seo.ts';
+
+const title = 'Новости и акции производства перчаток';
+const description = fitDescription(
+  'Новости производства «Рабочая тема» 2022–2023: перчатки 10 класса с платировкой, плотная «семинитка», двойные и цветные перчатки, архив акций и скидок за опт.',
+  ...TAILS,
+);
+---
+<Page title={title} description={description} h1="Новости" crumbs={[{ name: 'Новости', href: '/novosti/' }]}
+  lead="Новинки производства и акции. Публикации 2022–2023 годов — архив: цены указаны на дату публикации, акции завершены.">
+  <ul class="grid grid--3" role="list">
+    {news.map((n) => <li><NewsCard item={n} /></li>)}
+  </ul>
+</Page>

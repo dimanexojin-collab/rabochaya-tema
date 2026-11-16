@@ -1,0 +1,33 @@
+---
+/** Внутренняя страница: крошки + H1 + лид + слот + CTA. Крошки начинаются с главной автоматически. */
+import Base, { type Props as BaseProps } from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import type { Crumb } from '../lib/schema.ts';
+
+interface Props extends Omit<BaseProps, 'crumbs'> {
+  h1: string;
+  lead?: string;
+  /** Крошки после «Главная»; последний элемент — текущая страница */
+  crumbs: Crumb[];
+  cta?: boolean;
+  ctaSubject?: string;
+}
+
+const { h1, lead, crumbs, cta = true, ctaSubject, ...base } = Astro.props;
+const chain: Crumb[] = [{ name: 'Главная', href: '/' }, ...crumbs];
+---
+<Base {...base} crumbs={chain}>
+  <Breadcrumbs items={chain} />
+  <article class="page">
+    <header class="page-head container">
+      <h1>{h1}</h1>
+      {lead && <p class="lead">{lead}</p>}
+      <slot name="head" />
+    </header>
+    <div class="page-body container">
+      <slot />
+    </div>
+  </article>
+  {cta && <CtaBand subject={ctaSubject} />}
+</Base>

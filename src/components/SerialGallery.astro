@@ -1,0 +1,33 @@
+---
+/** «Серийные позиции»: фото продукции собственного производства (оригиналы 768–1920 px), привязаны к строкам прайса. */
+import { Picture } from 'astro:assets';
+import { serialItems, priceRow } from '../data/catalog.ts';
+import { img } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { formatFrom } from '../lib/format.ts';
+
+interface Props {
+  /** На /optom/ ссылки ведут на якорь строки, на других страницах — на /optom/#… */
+  onPricePage?: boolean;
+  withAnchors?: boolean;
+}
+const { onPricePage = false, withAnchors = false } = Astro.props;
+---
+<ul class="serial" role="list">
+  {serialItems.map((s) => {
+    const row = s.priceRow ? priceRow(s.priceRow) : undefined;
+    return (
+      <li id={withAnchors ? s.id : undefined} data-reveal>
+        <figure>
+          <Picture src={img(s.id)} alt={s.caption} formats={['avif', 'webp']} widths={[300, 360, 480, 640, 720, 960]} sizes="(min-width: 1080px) 290px, (min-width: 600px) 45vw, 90vw" loading="lazy" decoding="async" />
+          <figcaption>
+            {s.caption}
+            {row && row.priceFrom !== null && (
+              <> — <a href={onPricePage ? `#${row.id}` : url(`/optom/#${row.id}`)}><span class="price" data-price={row.priceFrom}>{formatFrom(row.priceFrom)}</span> в прайсе</a></>
+            )}
+          </figcaption>
+        </figure>
+      </li>
+    );
+  })}
+</ul>

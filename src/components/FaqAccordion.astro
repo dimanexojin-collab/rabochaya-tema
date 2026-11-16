@@ -1,0 +1,18 @@
+---
+import type { FaqItem } from '../data/faq.ts';
+interface Props {
+  items: FaqItem[];
+  title?: string;
+  id?: string;
+}
+const { items, title = 'Частые вопросы', id = 'faq' } = Astro.props;
+---
+<section class="faq section" aria-labelledby={`${id}-title`}>
+  <h2 id={`${id}-title`}>{title}</h2>
+  {items.map((f) => (
+    <details data-reveal>
+      <summary>{f.q}</summary>
+      <p class="faq__a">{f.a}</p>
+    </details>
+  ))}
+</section>

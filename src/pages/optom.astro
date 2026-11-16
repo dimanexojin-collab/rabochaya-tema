@@ -1,0 +1,48 @@
+---
+import { Picture } from 'astro:assets';
+import Page from '../layouts/Page.astro';
+import PriceTable from '../components/PriceTable.astro';
+import SerialGallery from '../components/SerialGallery.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { priceGroups } from '../data/catalog.ts';
+import { faqPrice } from '../data/faq.ts';
+import { img, alt } from '../lib/images.ts';
+import { url } from '../lib/paths.ts';
+import { formatFrom } from '../lib/format.ts';
+import { fitDescription, TAILS } from '../lib/seo.ts';
+import { priceListLd, faqPage } from '../lib/schema.ts';
+
+const rows = priceGroups.flatMap((g) => g.rows).filter((r) => r.priceFrom !== null);
+const min = Math.min(...rows.map((r) => r.priceFrom!));
+const title = 'Перчатки оптом от производителя — прайс с НДС';
+const description = fitDescription(
+  `Оптовый прайс на рабочие перчатки собственного производства: с ПВХ 10 и 7,5 класса, двойные, полушерстяные — ${formatFrom(min)} за пару с НДС, мешками по 100–300 пар.`,
+  ...TAILS,
+);
+---
+<Page title={title} description={description} h1="Оптовым клиентам: прайс на складские позиции" crumbs={[{ name: 'Оптом', href: '/optom/' }]}
+  lead="Цены за пару с НДС на перчатки, которые всегда есть на складе. Упаковка — мешок п/э. Помимо складских позиций вяжем перчатки под заказ: больше или меньше по размеру и плотности."
+  jsonLd={[priceListLd(priceGroups, '/optom/'), faqPage(faqPrice)]} ctaSubject="Запрос оптового прайса">
+  <div class="split split--price">
+    <PriceTable />
+    <figure class="media-round" data-reveal>
+      <Picture src={img('price-glove')} alt={alt('price-glove')} formats={['avif', 'webp']} widths={[360, 480, 600, 720, 900]} sizes="(min-width: 1080px) 460px, 90vw" loading="eager" fetchpriority="high" decoding="async" />
+    </figure>
+  </div>
+
+  <section class="section" aria-labelledby="serial-title">
+    <h2 id="serial-title">Серийные позиции собственного производства</h2>
+    <p>Так выглядят перчатки, которые мы вяжем серийно. Подписи ведут к строкам прайса.</p>
+    <SerialGallery onPricePage withAnchors />
+  </section>
+
+  <section class="section prose" aria-labelledby="how">
+    <h2 id="how">Как формируется цена</h2>
+    <p>Цена зависит прежде всего от расхода пряжи: тяжелее перчатка — дороже. Без ПВХ — на 1 ₽ дешевле, цветные — на 2 ₽ дороже; меньший размер, объём и предоплата тоже снижают цену. Подробнее — в статье <a href={url('/stati/kak-formiruetsya-cena/')}>«От чего зависит цена перчаток»</a>; что означает текс — <a href={url('/stati/teks-i-nomer-pryazhi/')}>в отдельном разборе</a>.</p>
+    <p>Готовые перчатки с ПВХ поштучно — в <a href={url('/katalog/perchatki/s-pvh/')}>каталоге</a>.</p>
+  </section>
+
+  <FaqAccordion items={faqPrice} title="Вопросы об оптовых ценах" id="faq-price" />
+  <LeadForm item="Перчатки оптом" />
+</Page>

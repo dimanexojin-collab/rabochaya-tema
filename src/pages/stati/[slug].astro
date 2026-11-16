@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Page from '../../layouts/Page.astro';
+import { articles, type Article } from '../../data/articles.ts';
+import { url } from '../../lib/paths.ts';
+import { pickTitle } from '../../lib/seo.ts';
+import { articleLd } from '../../lib/schema.ts';
+
+export const getStaticPaths = (() => articles.map((a) => ({ params: { slug: a.slug }, props: { a } }))) satisfies GetStaticPaths;
+const { a } = Astro.props as { a: Article };
+const path = `/stati/${a.slug}/`;
+---
+<Page title={pickTitle(a.title)} description={a.description} h1={a.h1} lead={a.lead}
+  crumbs={[{ name: 'Статьи', href: '/stati/' }, { name: a.title, href: path }]}
+  jsonLd={[articleLd({ type: 'Article', headline: a.h1, description: a.description, path })]} ogType="article">
+  <div class="prose">
+    {a.sections.map((s) => (
+      <section>
+        <h2>{s.h2}</h2>
+        {s.p.map((t) => <p>{t}</p>)}
+      </section>
+    ))}
+    <h2>Читайте также</h2>
+    <ul>{a.links.map((l) => <li><a href={url(l.href)}>{l.label}</a></li>)}</ul>
+  </div>
+</Page>

@@ -1,0 +1,97 @@
+{
+  "sections": [
+    {
+      "slug": "perchatki",
+      "name": "Перчатки",
+      "h1": "Рабочие перчатки",
+      "oldUrl": "/produktciya"
+    },
+    {
+      "slug": "rukavicy",
+      "name": "Рукавицы",
+      "h1": "Рукавицы",
+      "oldUrl": "/rukavitcy",
+      "direct": true
+    },
+    {
+      "slug": "siz",
+      "name": "СИЗ",
+      "h1": "Средства индивидуальной защиты",
+      "oldUrl": "/siz"
+    },
+    {
+      "slug": "obuv",
+      "name": "Обувь",
+      "h1": "Рабочая обувь",
+      "oldUrl": "/page"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "s-pvh",
+      "section": "perchatki",
+      "name": "Перчатки с ПВХ",
+      "h1": "Перчатки с ПВХ-покрытием"
+    },
+    {
+      "slug": "h-b",
+      "section": "perchatki",
+      "name": "Перчатки х/б",
+      "h1": "Перчатки х/б",
+      "image": "cat-h-b"
+    },
+    {
+      "slug": "s-oblivom",
+      "section": "perchatki",
+      "name": "Перчатки с обливом",
+      "h1": "Перчатки с обливом",
+      "tile": "tile-s-oblivom"
+    },
+    {
+      "slug": "zimnie",
+      "section": "perchatki",
+      "name": "Зимние перчатки",
+      "h1": "Зимние перчатки",
+      "image": "cat-zimnie",
+      "tile": "tile-zimnie"
+    },
+    {
+      "slug": "odnorazovye",
+      "section": "perchatki",
+      "name": "Одноразовые перчатки",
+      "h1": "Одноразовые перчатки",
+      "tile": "tile-odnorazovye"
+    },
+    {
+      "slug": "vibrozashchitnye",
+      "section": "perchatki",
+      "name": "Виброзащитные перчатки",
+      "h1": "Виброзащитные перчатки",
+      "tile": "tile-vibrozashchitnye"
+    },
+    {
+      "slug": "zashchita-dyhaniya",
+      "section": "siz",
+      "name": "Защита органов дыхания",
+      "h1": "Защита органов дыхания"
+    },
+    {
+      "slug": "zashchita-sluha",
+      "section": "siz",
+      "name": "Защита органов слуха",
+      "h1": "Защита органов слуха"
+    },
+    {
+      "slug": "zashchita-zreniya",
+      "section": "siz",
+      "name": "Защита органов зрения",
+      "h1": "Защита органов зрения"
+    },
+    {
+      "slug": "sapogi",
+      "section": "obuv",
+      "name": "Сапоги",
+      "h1": "Сапоги"
+    }
+  ]
+}

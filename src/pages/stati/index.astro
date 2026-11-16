@@ -1,0 +1,25 @@
+---
+import Page from '../../layouts/Page.astro';
+import { articles } from '../../data/articles.ts';
+import { url } from '../../lib/paths.ts';
+import { fitDescription, TAILS } from '../../lib/seo.ts';
+
+const title = 'Статьи о рабочих перчатках: класс вязки, текс, цена';
+const description = fitDescription(
+  'Разбираемся, чем 7 класс вязки отличается от 10, что такое текс и номер пряжи, почему «пятинитка» — не гарантия качества и от чего зависит цена перчаток.',
+  ...TAILS,
+);
+---
+<Page title={title} description={description} h1="Статьи о рабочих перчатках" crumbs={[{ name: 'Статьи', href: '/stati/' }]}
+  lead="Объясняем, как устроены трикотажные перчатки и как сравнивать их при покупке.">
+  <ul class="grid grid--3" role="list">
+    {articles.map((a) => (
+      <li>
+        <article class="card" data-reveal>
+          <h2 class="product-card__title"><a class="card__link" href={url(`/stati/${a.slug}/`)}>{a.title}</a></h2>
+          <p>{a.lead}</p>
+        </article>
+      </li>
+    ))}
+  </ul>
+</Page>

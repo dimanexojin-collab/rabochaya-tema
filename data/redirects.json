@@ -1,0 +1,284 @@
+[
+  {
+    "from": "https://www.5ni.ru/",
+    "to": "/"
+  },
+  {
+    "from": "https://www.5ni.ru/about",
+    "to": "/proizvodstvo/"
+  },
+  {
+    "from": "https://www.5ni.ru/service",
+    "to": "/kak-kupit/"
+  },
+  {
+    "from": "https://www.5ni.ru/contacts",
+    "to": "/kontakty/"
+  },
+  {
+    "from": "https://www.5ni.ru/price",
+    "to": "/optom/"
+  },
+  {
+    "from": "https://www.5ni.ru/raschet-tceny",
+    "to": "/stati/kak-formiruetsya-cena/"
+  },
+  {
+    "from": "https://www.5ni.ru/v-chyom-razlichie-7-klassa-vyazki-ot-10",
+    "to": "/stati/klass-vyazki-7-i-10/"
+  },
+  {
+    "from": "https://www.5ni.ru/kharakteristiki-pryazhi",
+    "to": "/stati/teks-i-nomer-pryazhi/"
+  },
+  {
+    "from": "https://www.5ni.ru/news",
+    "to": "/novosti/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/page-2",
+    "to": "/novosti/"
+  },
+  {
+    "from": "https://www.5ni.ru/Sitemap",
+    "to": "/karta-sajta/"
+  },
+  {
+    "from": "https://www.5ni.ru/nedruzhestvennye-gosudarstva",
+    "to": null,
+    "note": "не переносится — вопрос заказчику"
+  },
+  {
+    "from": "https://www.5ni.ru/page/botinki",
+    "to": "/katalog/obuv/",
+    "note": "пустая категория"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya",
+    "to": "/katalog/perchatki/"
+  },
+  {
+    "from": "https://www.5ni.ru/rukavitcy",
+    "to": "/katalog/rukavicy/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz",
+    "to": "/katalog/siz/"
+  },
+  {
+    "from": "https://www.5ni.ru/page",
+    "to": "/katalog/obuv/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-pvkh",
+    "to": "/katalog/perchatki/s-pvh/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-kh-b",
+    "to": "/katalog/perchatki/h-b/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-oblivom",
+    "to": "/katalog/perchatki/s-oblivom/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-zimnie",
+    "to": "/katalog/perchatki/zimnie/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-odnorazovye",
+    "to": "/katalog/perchatki/odnorazovye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/vibrazaschitnye",
+    "to": "/katalog/perchatki/vibrozashchitnye/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya",
+    "to": "/katalog/siz/zashchita-dyhaniya/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zashita-organov-slukha",
+    "to": "/katalog/siz/zashchita-sluha/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-glaz",
+    "to": "/katalog/siz/zashchita-zreniya/"
+  },
+  {
+    "from": "https://www.5ni.ru/page/sapogi",
+    "to": "/katalog/obuv/sapogi/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-10-klass-vyazki",
+    "to": "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-serye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-oblivom/perchatki-s-dvoynym-lateksnym-oblivom",
+    "to": "/katalog/perchatki/s-oblivom/perchatki-dvojnoj-lateksnyj-obliv/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-s-pvkh-7-klass-vyazki-belye",
+    "to": "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-belye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-10-klass-vyazki-belye",
+    "to": "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-belye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-7-klass-vyazki-belye",
+    "to": "/katalog/perchatki/h-b/perchatki-hb-7-klass-belye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-10-klass-vyazki-belye",
+    "to": "/katalog/perchatki/h-b/perchatki-hb-10-klass-belye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-7-klass-vyazki-serye",
+    "to": "/katalog/perchatki/h-b/perchatki-hb-7-klass-serye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-kh-b/perchatki-rabochie-kh-b-10-klass-vyazki-serye",
+    "to": "/katalog/perchatki/h-b/perchatki-hb-10-klass-serye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-oblivom/perchatki-s-odinarnym-lateksnym-oblivom",
+    "to": "/katalog/perchatki/s-oblivom/perchatki-hb-lateksnyj-obliv/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-s-pvkh/perchatki-rabochie-s-pvkh-7-klass-vyazki-serye",
+    "to": "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-serye/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-zimnie/perchatki-polusherstyanye-dvoynye",
+    "to": "/katalog/perchatki/zimnie/perchatki-polusherstyanye-dvojnye/"
+  },
+  {
+    "from": "https://www.5ni.ru/page/sapogi/sapogi-arktika-rezinovye-muzhskie-uteplennye",
+    "to": "/katalog/obuv/sapogi/sapogi-arktika-uteplennye/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zashita-organov-slukha/berushi-3m-1110",
+    "to": "/katalog/siz/zashchita-sluha/berushi-3m-1110/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zashita-organov-slukha/berushi-1100",
+    "to": "/katalog/siz/zashchita-sluha/berushi-3m-1100/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-200",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-alina-200/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-210",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-alina-210/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-310",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-alina-310/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-211",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-alina-211/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/vibrazaschitnye/perchatki-vibrostat-01",
+    "to": "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-01/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/vibrazaschitnye/perchatki-vibrostat-03",
+    "to": "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-03/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-alina-av",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-alina-av/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-zimnie/perchatki-morozostoykie-plamya",
+    "to": "/katalog/perchatki/zimnie/perchatki-morozostojkie-plamya/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-glaz/zaschitnye-ochki-uvex-ultravizhn",
+    "to": "/katalog/siz/zashchita-zreniya/ochki-uvex-ultravizhn/"
+  },
+  {
+    "from": "https://www.5ni.ru/rukavitcy/rukavitcy-khb-s-brezentovym-naladonnikom",
+    "to": "/katalog/rukavicy/rukavicy-hb-brezentovyj-naladonnik/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/novyy-tovar",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-lepestok-40-sb/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/benovy-nitrile",
+    "to": "/katalog/perchatki/odnorazovye/perchatki-nitrilovye-benovy/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/perchatki-vinilovye-neopudrennye-benovy-golubye",
+    "to": "/katalog/perchatki/odnorazovye/perchatki-vinilovye-benovy/"
+  },
+  {
+    "from": "https://www.5ni.ru/produktciya/perchatki-odnorazovye/perchatki-benovy-iz-termoplastichnogo-elastomera-100-par",
+    "to": "/katalog/perchatki/odnorazovye/perchatki-benovy-tpe/"
+  },
+  {
+    "from": "https://www.5ni.ru/siz/zaschita-dykhaniya/respirator-spiro-312a-ffp2-nr-d",
+    "to": "/katalog/siz/zashchita-dyhaniya/respirator-spiro-312a/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-03-06/trebuetsya-pryazha",
+    "to": "/novosti/trebuetsya-pryazha/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-04-19/skidka-za-opt",
+    "to": "/novosti/skidka-za-opt-1000-par/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-04-29/nalazhen-vypusk-perchatok-10-klassa-s-platirovkoy",
+    "to": "/novosti/perchatki-10-klassa-s-platirovkoj/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-05-23/plotnye-tolstye-perchatki",
+    "to": "/novosti/plotnye-perchatki-seminitka/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-06-07/aktciya",
+    "to": "/novosti/letnie-skidki-ot-obema/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-06-28/aktciya-dvoynye-perchatki-so-skidkoy-20-do-kontca-iyulya-2022-go",
+    "to": "/novosti/skidka-20-na-dvojnye-perchatki/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2022-10-05/dvoynye-perchatki-po-28-rubley",
+    "to": "/novosti/dvojnye-perchatki-28-rublej/"
+  },
+  {
+    "from": "https://www.5ni.ru/news/2023-02-25/tcvetnye-perchatki",
+    "to": "/novosti/cvetnye-perchatki/"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-s-pvkh-10-klass-3-kh-nitka",
+    "to": "/optom/#serial-pvh-10-3-niti"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-s-pvkh-10-klass-4-kh-nitka",
+    "to": "/optom/#serial-pvh-10-4-niti"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-10-klass-3-kh-nitka",
+    "to": "/optom/#serial-10-3-4-niti"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-10-klass-4-kh-nitka",
+    "to": "/optom/#serial-10-3-4-niti"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-s-pvkh-7-klass-4-kh-nitka",
+    "to": "/optom/#serial-pvh-7-4-niti"
+  },
+  {
+    "from": "https://www.5ni.ru/perchatki-trikotazhnye-7-klass-5-kh-nitka",
+    "to": "/optom/#serial-7-5-nitej"
+  }
+]

@@ -1,0 +1,1224 @@
+{
+  "note": "Источник → мастер-файл. method: esrgan | sharp | blend | normalize | icon. result пишет scripts/images-upscale.mjs",
+  "images": [
+    {
+      "src": "source/images/product-perchatki-rabochie-s-pvkh-10-klass-vyazki.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-pvh-10-klass-serye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-pvh-10-klass-serye.png",
+      "alt": "Перчатки рабочие с ПВХ 10 класс вязки, серые",
+      "usedBy": [
+        "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-serye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-s-dvoynym-lateksnym-oblivom.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-dvojnoj-lateksnyj-obliv",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-dvojnoj-lateksnyj-obliv.png",
+      "alt": "Перчатки с двойным латексным обливом",
+      "usedBy": [
+        "/katalog/perchatki/s-oblivom/perchatki-dvojnoj-lateksnyj-obliv/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-s-pvkh-7-klass-vyazki-belye.jpg",
+      "srcW": 225,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-pvh-7-klass-belye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-pvh-7-klass-belye.png",
+      "alt": "Перчатки рабочие с ПВХ 7 класс вязки, белые",
+      "usedBy": [
+        "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-belye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 225,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-s-pvkh-10-klass-vyazki-belye.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-pvh-10-klass-belye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-pvh-10-klass-belye.png",
+      "alt": "Перчатки рабочие с ПВХ 10 класс вязки, белые",
+      "usedBy": [
+        "/katalog/perchatki/s-pvh/perchatki-pvh-10-klass-belye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-kh-b-7-klass-vyazki-belye.jpg",
+      "srcW": 218,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-hb-7-klass-belye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-hb-7-klass-belye.png",
+      "alt": "Перчатки рабочие х/б 7 класс вязки, белые",
+      "usedBy": [
+        "/katalog/perchatki/h-b/perchatki-hb-7-klass-belye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 218,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-kh-b-10-klass-vyazki-belye.webp",
+      "srcW": 270,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-hb-10-klass-belye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-hb-10-klass-belye.png",
+      "alt": "Перчатки рабочие х/б 10 класс вязки, белые",
+      "usedBy": [
+        "/katalog/perchatki/h-b/perchatki-hb-10-klass-belye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 270,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-kh-b-7-klass-vyazki-serye.jpg",
+      "srcW": 231,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-hb-7-klass-serye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-hb-7-klass-serye.png",
+      "alt": "Перчатки рабочие х/б 7 класс вязки, серые",
+      "usedBy": [
+        "/katalog/perchatki/h-b/perchatki-hb-7-klass-serye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 231,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-kh-b-10-klass-vyazki-serye.jpg",
+      "srcW": 240,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-hb-10-klass-serye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-hb-10-klass-serye.png",
+      "alt": "Перчатки рабочие х/б 10 класс вязки, серые",
+      "usedBy": [
+        "/katalog/perchatki/h-b/perchatki-hb-10-klass-serye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 240,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-s-odinarnym-lateksnym-oblivom.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-hb-lateksnyj-obliv",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-hb-lateksnyj-obliv.png",
+      "alt": "Перчатки х/б с латексным обливом",
+      "usedBy": [
+        "/katalog/perchatki/s-oblivom/perchatki-hb-lateksnyj-obliv/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-rabochie-s-pvkh-7-klass-vyazki-serye.png",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-pvh-7-klass-serye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-pvh-7-klass-serye.png",
+      "alt": "Перчатки рабочие с ПВХ 7 класс вязки, серые",
+      "usedBy": [
+        "/katalog/perchatki/s-pvh/perchatki-pvh-7-klass-serye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-polusherstyanye-dvoynye.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-polusherstyanye-dvojnye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-polusherstyanye-dvojnye.png",
+      "alt": "Перчатки полушерстяные двойные",
+      "usedBy": [
+        "/katalog/perchatki/zimnie/perchatki-polusherstyanye-dvojnye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-sapogi-arktika-rezinovye-muzhskie-uteplennye.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "sapogi-arktika-uteplennye",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/sapogi-arktika-uteplennye.png",
+      "alt": "Сапоги «Арктика» резиновые мужские утеплённые",
+      "usedBy": [
+        "/katalog/obuv/sapogi/sapogi-arktika-uteplennye/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-berushi-3m-1110.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "berushi-3m-1110",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/berushi-3m-1110.png",
+      "alt": "Беруши 3М 1110",
+      "usedBy": [
+        "/katalog/siz/zashchita-sluha/berushi-3m-1110/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-berushi-1100.jpg",
+      "srcW": 269,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "berushi-3m-1100",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/berushi-3m-1100.png",
+      "alt": "Беруши 3М 1100",
+      "usedBy": [
+        "/katalog/siz/zashchita-sluha/berushi-3m-1100/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 269,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-alina-200.jpg",
+      "srcW": 270,
+      "srcH": 157,
+      "thumbOnly": true,
+      "id": "respirator-alina-200",
+      "kind": "product",
+      "method": "blend",
+      "target": "src/assets/products/respirator-alina-200.png",
+      "alt": "Респиратор Алина 200",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-alina-200/"
+      ],
+      "result": {
+        "method": "upscaled-blend",
+        "w": 800,
+        "h": 800,
+        "srcW": 270,
+        "srcH": 157,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-alina-210.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-alina-210",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/respirator-alina-210.png",
+      "alt": "Респиратор Алина 210",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-alina-210/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-alina-310.webp",
+      "srcW": 201,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-alina-310",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/respirator-alina-310.png",
+      "alt": "Респиратор Алина 310",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-alina-310/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 201,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-alina-211.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-alina-211",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/respirator-alina-211.png",
+      "alt": "Респиратор Алина 211",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-alina-211/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-vibrostat-01.png",
+      "srcW": 206,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-vibrostat-01",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-vibrostat-01.png",
+      "alt": "Перчатки виброзащитные Вибростат-01",
+      "usedBy": [
+        "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-01/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 206,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-vibrostat-03.jpg",
+      "srcW": 150,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-vibrostat-03",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-vibrostat-03.png",
+      "alt": "Перчатки виброзащитные Вибростат-03",
+      "usedBy": [
+        "/katalog/perchatki/vibrozashchitnye/perchatki-vibrostat-03/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 150,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-alina-av.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-alina-av",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/respirator-alina-av.png",
+      "alt": "Респиратор Алина АВ",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-alina-av/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-morozostoykie-plamya.jpg",
+      "srcW": 183,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-morozostojkie-plamya",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-morozostojkie-plamya.png",
+      "alt": "Перчатки морозостойкие «Пламя»",
+      "usedBy": [
+        "/katalog/perchatki/zimnie/perchatki-morozostojkie-plamya/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 183,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-zaschitnye-ochki-uvex-ultravizhn.webp",
+      "srcW": 270,
+      "srcH": 139,
+      "thumbOnly": true,
+      "id": "ochki-uvex-ultravizhn",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/ochki-uvex-ultravizhn.png",
+      "alt": "Защитные очки UVEX Ультравижн",
+      "usedBy": [
+        "/katalog/siz/zashchita-zreniya/ochki-uvex-ultravizhn/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 270,
+        "srcH": 139,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-rukavitcy-khb-s-brezentovym-naladonnikom.png",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "rukavicy-hb-brezentovyj-naladonnik",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/rukavicy-hb-brezentovyj-naladonnik.png",
+      "alt": "Рукавицы х/б с брезентовым наладонником",
+      "usedBy": [
+        "/katalog/rukavicy/rukavicy-hb-brezentovyj-naladonnik/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-novyy-tovar.png",
+      "srcW": 270,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-lepestok-40-sb",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/respirator-lepestok-40-sb.png",
+      "alt": "Респиратор Лепесток 40 СБ, FFP2 NR D",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-lepestok-40-sb/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 270,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-benovy-nitrile.png",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-nitrilovye-benovy",
+      "kind": "product",
+      "method": "blend",
+      "target": "src/assets/products/perchatki-nitrilovye-benovy.png",
+      "alt": "Перчатки нитриловые Benovy Nitrile, 100 пар",
+      "usedBy": [
+        "/katalog/perchatki/odnorazovye/perchatki-nitrilovye-benovy/"
+      ],
+      "result": {
+        "method": "upscaled-blend",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-vinilovye-neopudrennye-benovy-golubye.webp",
+      "srcW": 192,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-vinilovye-benovy",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-vinilovye-benovy.png",
+      "alt": "Перчатки виниловые Benovy голубые, 100 пар",
+      "usedBy": [
+        "/katalog/perchatki/odnorazovye/perchatki-vinilovye-benovy/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 192,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-benovy-iz-termoplastichnogo-elastomera-100-par.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "perchatki-benovy-tpe",
+      "kind": "product",
+      "method": "esrgan",
+      "target": "src/assets/products/perchatki-benovy-tpe.png",
+      "alt": "Перчатки Benovy из термопластичного эластомера, 100 пар",
+      "usedBy": [
+        "/katalog/perchatki/odnorazovye/perchatki-benovy-tpe/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/product-respirator-spiro-312a-ffp2-nr-d.jpg",
+      "srcW": 270,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "respirator-spiro-312a",
+      "kind": "product",
+      "method": "esrgan",
+      "whiten": false,
+      "target": "src/assets/products/respirator-spiro-312a.png",
+      "alt": "Респиратор СПИРО-312А FFP2 NR D от сварочных дымов",
+      "usedBy": [
+        "/katalog/siz/zashchita-dyhaniya/respirator-spiro-312a/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 270,
+        "srcH": 180,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/category-perchatki-kh-b.jpg",
+      "srcW": 240,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "cat-h-b",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/cat-h-b.png",
+      "alt": "Рабочие перчатки х/б",
+      "usedBy": [
+        "/katalog/perchatki/",
+        "/katalog/perchatki/h-b/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 240,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/category-perchatki-zimnie.png",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "cat-zimnie",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/cat-zimnie.png",
+      "alt": "Зимние рабочие перчатки",
+      "usedBy": [
+        "/katalog/perchatki/",
+        "/katalog/perchatki/zimnie/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/category-home-tile-08-png.png",
+      "srcW": 268,
+      "srcH": 182,
+      "thumbOnly": true,
+      "id": "tile-zimnie",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/tile-zimnie.png",
+      "alt": "Зимние перчатки",
+      "usedBy": [
+        "/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 268,
+        "srcH": 182,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/category-home-tile-2-jpg.jpg",
+      "srcW": 268,
+      "srcH": 182,
+      "thumbOnly": true,
+      "id": "tile-s-oblivom",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/tile-s-oblivom.png",
+      "alt": "Перчатки с обливом",
+      "usedBy": [
+        "/",
+        "/katalog/perchatki/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 268,
+        "srcH": 182,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/category-home-tile-45-png.png",
+      "srcW": 268,
+      "srcH": 182,
+      "thumbOnly": true,
+      "id": "tile-odnorazovye",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/tile-odnorazovye.png",
+      "alt": "Одноразовые перчатки",
+      "usedBy": [
+        "/",
+        "/katalog/perchatki/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 268,
+        "srcH": 182,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/category-home-tile-29-png.png",
+      "srcW": 268,
+      "srcH": 182,
+      "thumbOnly": true,
+      "id": "tile-vibrozashchitnye",
+      "kind": "category",
+      "method": "esrgan",
+      "target": "src/assets/categories/tile-vibrozashchitnye.png",
+      "alt": "Виброзащитные перчатки",
+      "usedBy": [
+        "/",
+        "/katalog/perchatki/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 800,
+        "h": 800,
+        "srcW": 268,
+        "srcH": 182,
+        "whitened": true
+      }
+    },
+    {
+      "src": "source/images/news-2022-05-23__plotnye-tolstye-perchatki.jpg",
+      "srcW": 1920,
+      "srcH": 1340,
+      "thumbOnly": false,
+      "id": "news-plotnye-perchatki-seminitka",
+      "kind": "news",
+      "method": "normalize",
+      "target": "src/assets/news/news-plotnye-perchatki-seminitka.jpg",
+      "alt": "Плотные перчатки «семинитка» для тяжёлых работ",
+      "usedBy": [
+        "/novosti/plotnye-perchatki-seminitka/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1920,
+        "h": 1340,
+        "srcW": 1920,
+        "srcH": 1340,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-05-23__plotnye-tolstye-perchatki-2.jpg",
+      "srcW": 1920,
+      "srcH": 1529,
+      "thumbOnly": false,
+      "id": "news-plotnye-perchatki-seminitka-2",
+      "kind": "news",
+      "method": "normalize",
+      "target": "src/assets/news/news-plotnye-perchatki-seminitka-2.jpg",
+      "alt": "Плотные перчатки «семинитка» для тяжёлых работ",
+      "usedBy": [
+        "/novosti/plotnye-perchatki-seminitka/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1920,
+        "h": 1529,
+        "srcW": 1920,
+        "srcH": 1529,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-05-23__plotnye-tolstye-perchatki-thumb.jpg",
+      "srcW": 210,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "news-plotnye-perchatki-seminitka-thumb",
+      "kind": "news-thumb",
+      "method": "esrgan",
+      "target": "src/assets/news/news-plotnye-perchatki-seminitka-thumb.jpg",
+      "alt": "Плотные перчатки «семинитка» для тяжёлых работ",
+      "usedBy": [
+        "/novosti/",
+        "/novosti/plotnye-perchatki-seminitka/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 840,
+        "h": 720,
+        "srcW": 210,
+        "srcH": 180,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-06-07__aktciya-thumb.jpg",
+      "srcW": 180,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "news-letnie-skidki-ot-obema-thumb",
+      "kind": "news-thumb",
+      "method": "esrgan",
+      "target": "src/assets/news/news-letnie-skidki-ot-obema-thumb.jpg",
+      "alt": "Летняя акция: скидка до 10 % от 2000 пар",
+      "usedBy": [
+        "/novosti/",
+        "/novosti/letnie-skidki-ot-obema/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 720,
+        "h": 720,
+        "srcW": 180,
+        "srcH": 180,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-06-28__aktciya-dvoynye-perchatki-so-skidkoy-20-do-kontca-iyulya-2022-go.jpg",
+      "srcW": 768,
+      "srcH": 1024,
+      "thumbOnly": false,
+      "id": "news-skidka-20-na-dvojnye-perchatki",
+      "kind": "news",
+      "method": "normalize",
+      "target": "src/assets/news/news-skidka-20-na-dvojnye-perchatki.jpg",
+      "alt": "Двойные перчатки со скидкой 20 % до конца июля 2022",
+      "usedBy": [
+        "/novosti/skidka-20-na-dvojnye-perchatki/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 768,
+        "h": 1024,
+        "srcW": 768,
+        "srcH": 1024,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-06-28__aktciya-dvoynye-perchatki-so-skidkoy-20-do-kontca-iyulya-2022-go-thumb.jpg",
+      "srcW": 135,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "news-skidka-20-na-dvojnye-perchatki-thumb",
+      "kind": "news-thumb",
+      "method": "esrgan",
+      "target": "src/assets/news/news-skidka-20-na-dvojnye-perchatki-thumb.jpg",
+      "alt": "Двойные перчатки со скидкой 20 % до конца июля 2022",
+      "usedBy": [
+        "/novosti/",
+        "/novosti/skidka-20-na-dvojnye-perchatki/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 540,
+        "h": 720,
+        "srcW": 135,
+        "srcH": 180,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2022-10-05__dvoynye-perchatki-po-28-rubley.jpg",
+      "srcW": 1024,
+      "srcH": 768,
+      "thumbOnly": false,
+      "id": "news-dvojnye-perchatki-28-rublej",
+      "kind": "news",
+      "method": "normalize",
+      "target": "src/assets/news/news-dvojnye-perchatki-28-rublej.jpg",
+      "alt": "Двойные перчатки на холодный сезон — 28 ₽",
+      "usedBy": [
+        "/novosti/dvojnye-perchatki-28-rublej/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1024,
+        "h": 768,
+        "srcW": 1024,
+        "srcH": 768,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2023-02-25__tcvetnye-perchatki.jpg",
+      "srcW": 768,
+      "srcH": 1024,
+      "thumbOnly": false,
+      "id": "news-cvetnye-perchatki",
+      "kind": "news",
+      "method": "normalize",
+      "target": "src/assets/news/news-cvetnye-perchatki.jpg",
+      "alt": "Вяжем цветные перчатки",
+      "usedBy": [
+        "/novosti/cvetnye-perchatki/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 768,
+        "h": 1024,
+        "srcW": 768,
+        "srcH": 1024,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/news-2023-02-25__tcvetnye-perchatki-thumb.jpg",
+      "srcW": 135,
+      "srcH": 180,
+      "thumbOnly": true,
+      "id": "news-cvetnye-perchatki-thumb",
+      "kind": "news-thumb",
+      "method": "esrgan",
+      "target": "src/assets/news/news-cvetnye-perchatki-thumb.jpg",
+      "alt": "Вяжем цветные перчатки",
+      "usedBy": [
+        "/novosti/",
+        "/novosti/cvetnye-perchatki/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 540,
+        "h": 720,
+        "srcW": 135,
+        "srcH": 180,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/production-knitting-machines.jpg",
+      "srcW": 1920,
+      "srcH": 1315,
+      "thumbOnly": false,
+      "id": "ceh",
+      "kind": "production",
+      "method": "normalize",
+      "target": "src/assets/production/ceh.jpg",
+      "alt": "Вязальные машины в цехе «Рабочей темы» в Архангельске",
+      "usedBy": [
+        "/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1920,
+        "h": 1315,
+        "srcW": 1920,
+        "srcH": 1315,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-trikotazhnye-s-pvkh-10-klass-3-kh-nitka.jpg",
+      "srcW": 1920,
+      "srcH": 1440,
+      "thumbOnly": false,
+      "id": "serial-pvh-10-3-niti",
+      "kind": "serial",
+      "method": "normalize",
+      "target": "src/assets/production/serial-pvh-10-3-niti.jpg",
+      "alt": "Перчатки трикотажные с ПВХ, 10 класс, «3 нити»",
+      "usedBy": [
+        "/optom/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1920,
+        "h": 1440,
+        "srcW": 1920,
+        "srcH": 1440,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-trikotazhnye-s-pvkh-10-klass-4-kh-nitka.jpg",
+      "srcW": 800,
+      "srcH": 800,
+      "thumbOnly": false,
+      "id": "serial-pvh-10-4-niti",
+      "kind": "serial",
+      "method": "normalize",
+      "target": "src/assets/production/serial-pvh-10-4-niti.jpg",
+      "alt": "Перчатки трикотажные с ПВХ, 10 класс, «4 нити»",
+      "usedBy": [
+        "/optom/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 800,
+        "h": 800,
+        "srcW": 800,
+        "srcH": 800,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-trikotazhnye-10-klass-3-kh-nitka.jpg",
+      "srcW": 1920,
+      "srcH": 1440,
+      "thumbOnly": false,
+      "id": "serial-10-3-4-niti",
+      "kind": "serial",
+      "method": "normalize",
+      "target": "src/assets/production/serial-10-3-4-niti.jpg",
+      "alt": "Перчатки трикотажные без ПВХ, 10 класс, «3» и «4 нити»",
+      "usedBy": [
+        "/optom/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1920,
+        "h": 1440,
+        "srcW": 1920,
+        "srcH": 1440,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-trikotazhnye-s-pvkh-7-klass-4-kh-nitka.png",
+      "srcW": 1000,
+      "srcH": 1000,
+      "thumbOnly": false,
+      "id": "serial-pvh-7-4-niti",
+      "kind": "serial",
+      "method": "normalize",
+      "target": "src/assets/production/serial-pvh-7-4-niti.jpg",
+      "alt": "Перчатки трикотажные с ПВХ, 7 класс, «4 нити»",
+      "usedBy": [
+        "/optom/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 1000,
+        "h": 1000,
+        "srcW": 1000,
+        "srcH": 1000,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/product-perchatki-trikotazhnye-7-klass-5-kh-nitka.jpg",
+      "srcW": 768,
+      "srcH": 876,
+      "thumbOnly": false,
+      "id": "serial-7-5-nitej",
+      "kind": "serial",
+      "method": "normalize",
+      "target": "src/assets/production/serial-7-5-nitej.jpg",
+      "alt": "Перчатки трикотажные без ПВХ, 7 класс, «5 нитей» (пятинитка)",
+      "usedBy": [
+        "/optom/",
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "original-normalized",
+        "w": 768,
+        "h": 876,
+        "srcW": 768,
+        "srcH": 876,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/price-glove-pvkh-80g.jpg",
+      "srcW": 461,
+      "srcH": 594,
+      "thumbOnly": false,
+      "id": "price-glove",
+      "kind": "serial",
+      "method": "esrgan",
+      "target": "src/assets/production/price-glove.jpg",
+      "alt": "Рабочая перчатка с ПВХ-покрытием «точка»",
+      "usedBy": [
+        "/optom/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 1490,
+        "h": 1920,
+        "srcW": 461,
+        "srcH": 594,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/banner-rabochaya-tema-660x160.jpg",
+      "srcW": 660,
+      "srcH": 160,
+      "thumbOnly": false,
+      "id": "banner-wide",
+      "kind": "banner",
+      "method": "esrgan",
+      "target": "src/assets/brand/banner-wide.jpg",
+      "alt": "Баннер «Рабочая тема»: рабочие перчатки с ПВХ",
+      "usedBy": [
+        "/kontakty/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 1920,
+        "h": 465,
+        "srcW": 660,
+        "srcH": 160,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/banner-rabochaya-tema-660x240.jpg",
+      "srcW": 660,
+      "srcH": 240,
+      "thumbOnly": false,
+      "id": "banner",
+      "kind": "banner",
+      "method": "esrgan",
+      "target": "src/assets/brand/banner.jpg",
+      "alt": "Баннер «Рабочая тема»: рабочие перчатки с ПВХ",
+      "usedBy": [
+        "/proizvodstvo/"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 1920,
+        "h": 698,
+        "srcW": 660,
+        "srcH": 240,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/logo-rabochaya-tema-spetsmarket.jpg",
+      "srcW": 250,
+      "srcH": 68,
+      "thumbOnly": true,
+      "id": "logo",
+      "kind": "logo",
+      "method": "esrgan",
+      "target": "src/assets/brand/logo.png",
+      "alt": "Логотип «Рабочая тема»",
+      "usedBy": [
+        "все страницы (футер)",
+        "public/icons"
+      ],
+      "result": {
+        "method": "upscaled-ai",
+        "w": 1000,
+        "h": 272,
+        "srcW": 250,
+        "srcH": 68,
+        "whitened": false
+      }
+    },
+    {
+      "src": "source/images/favicon.ico",
+      "srcW": 16,
+      "srcH": 16,
+      "thumbOnly": false,
+      "id": "favicon-src",
+      "kind": "favicon",
+      "method": "icon",
+      "target": null,
+      "alt": "",
+      "usedBy": [
+        "public/favicon.* (prepare-assets: иконки строятся из эмблемы логотипа; исходный favicon.ico 16 px — эталон цвета)"
+      ]
+    }
+  ]
+}

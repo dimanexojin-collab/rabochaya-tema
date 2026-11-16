@@ -1,0 +1,10 @@
+---
+import type { JsonLd } from '../lib/schema.ts';
+
+interface Props {
+  data: (JsonLd | null | undefined | false)[];
+}
+// `<` экранируется: строка из данных не может закрыть <script>.
+const items = Astro.props.data.filter(Boolean).map((d) => JSON.stringify(d).replace(/</g, '\\u003c'));
+---
+{items.map((json) => <script type="application/ld+json" set:html={json} />)}

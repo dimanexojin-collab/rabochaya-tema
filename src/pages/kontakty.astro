@@ -1,0 +1,39 @@
+---
+import { Picture } from 'astro:assets';
+import Page from '../layouts/Page.astro';
+import LeadForm from '../components/LeadForm.astro';
+import TodoNote from '../components/TodoNote.astro';
+import { SITE, isTodo, filled, fullAddress } from '../config/site.ts';
+import { img, alt } from '../lib/images.ts';
+import { fitDescription } from '../lib/seo.ts';
+
+const title = 'Контакты «Рабочая тема»: пр. Ломоносова, 88';
+const description = fitDescription(
+  `Контакты «Рабочей темы»: ${fullAddress()}. Менеджеры ${SITE.phones[1].display}, тел./факс ${SITE.phones[2].display}, e-mail ${SITE.email}.`,
+  'Перчатки оптом и в розницу.',
+);
+const map = filled(SITE.mapUrl);
+---
+<Page title={title} description={description} h1="Контакты" crumbs={[{ name: 'Контакты', href: '/kontakty/' }]} cta={false}
+  lead="Где купить рабочие перчатки в Архангельске: отдел на проспекте Ломоносова и менеджеры по продажам.">
+  <div class="split">
+    <section aria-labelledby="addr">
+      <h2 id="addr">Адрес и телефоны</h2>
+      <address>
+        <ul class="contact-list">
+          <li><strong>{fullAddress()}</strong></li>
+          <li>{SITE.legal.entity}, ИНН {SITE.legal.inn}</li>
+          {SITE.phones.map((p) => <li>{p.label}: <a href={p.href}>{p.display}</a></li>)}
+          <li>E-mail: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+          <li>График работы: {isTodo(SITE.hours) ? <TodoNote what="график" /> : SITE.hours}</li>
+          <li>Как добраться: {isTodo(SITE.howToGet) ? <TodoNote what="схема проезда" /> : SITE.howToGet}</li>
+          {map && <li><a href={map} rel="noopener" target="_blank">Открыть на карте</a></li>}
+        </ul>
+      </address>
+    </section>
+    <figure class="media-round" data-reveal>
+      <Picture src={img('banner-wide')} alt={alt('banner-wide')} formats={['avif', 'webp']} widths={[640, 960, 1280]} sizes="(min-width: 900px) 580px, 90vw" loading="lazy" decoding="async" />
+    </figure>
+  </div>
+  <LeadForm />
+</Page>

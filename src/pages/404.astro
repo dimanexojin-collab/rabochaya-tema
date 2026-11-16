@@ -1,0 +1,18 @@
+---
+/** dist/404.html: GitHub Pages отдаёт её для любых несуществующих путей внутри /rabochaya-tema/. Все ссылки — через url(). */
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/paths.ts';
+import { mainNav } from '../lib/nav.ts';
+---
+<Base title="Страница не найдена — «Рабочая тема»" description="Такой страницы нет: возможно, адрес изменился после переезда сайта. Перейдите в каталог рабочих перчаток, оптовый прайс или на главную." noindex>
+  <section class="container section">
+    <h1>Страница не найдена</h1>
+    <p class="lead">Возможно, адрес изменился после обновления сайта. Начните с главной или каталога.</p>
+    <p>Мы производим рабочие перчатки х/б и с ПВХ в Архангельске и продаём средства защиты оптом и в розницу. Цены на складские позиции — в оптовом прайсе, адрес и телефоны — на странице контактов.</p>
+    <div class="btn-row">
+      <a class="btn" href={url('/')}>На главную</a>
+      <a class="btn btn--ghost" href={url('/katalog/')}>Каталог</a>
+    </div>
+    <ul class="section">{mainNav.map((n) => <li><a href={url(n.href)}>{n.label}</a></li>)}</ul>
+  </section>
+</Base>
