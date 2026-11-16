@@ -27,7 +27,8 @@ const description = fitDescription(
   <div class="split split--price">
     <PriceTable />
     <figure class="media-round" data-reveal>
-      <Picture src={img('price-glove')} alt={alt('price-glove')} formats={['avif', 'webp']} widths={[360, 480, 600, 720, 900]} sizes="(min-width: 1080px) 460px, 90vw" loading="eager" fetchpriority="high" decoding="async" />
+      <Picture src={img('price-glove')} alt={alt('price-glove')} formats={['avif', 'webp']} widths={[360, 480, 600, 720, 900]} sizes="(min-width: 1080px) 460px, 90vw" loading="lazy" decoding="async" />
+      {/* lazy оставлен намеренно: на телефоне фото ниже прайса, eager+fetchpriority ухудшали LCP с 0.8 до 2.0 с */}
     </figure>
   </div>
 

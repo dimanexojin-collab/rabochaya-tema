@@ -45,6 +45,11 @@ STRICT=1 npm run build      # перед боевым запуском: пада
 ## 4. Переезд на свой домен
 1. В workflow: `SITE: https://example.ru`, `BASE: /`; в репозитории — `public/CNAME` с доменом; DNS — по инструкции GitHub Pages.
 2. Старые адреса 5ni.ru → новые: `data/redirects.json` (пары «старый URL → новый») — для 301 на старом хостинге/nginx.
+   GitHub Pages сам 301 делать не умеет (кроме добавления «/» в конце: `/optom` → `/optom/`).
+   Пути `to` указаны **без base** — это верно для своего домена (BASE=/). Если 301 со старого сайта ставить, пока сайт
+   живёт на github.io, к `to` нужно добавить `https://<owner>.github.io/rabochaya-tema` (иначе редирект уведёт на kontur).
+   В `from` только `https://www.5ni.ru/…` — адреса без `www` и с `http://` сначала свести к `https://www.5ni.ru` одним правилом.
+   Единственная запись с `"to": null` (`/nedruzhestvennye-gosudarstva`) — отдавать 410/404, пока заказчик не решит (QUESTIONS 13).
 3. После переезда начнёт работать собственный `robots.txt`; строку из kontur можно убрать.
 
 ## 5. После деплоя

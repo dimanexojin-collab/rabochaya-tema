@@ -11,7 +11,8 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # как в шаблоне GitHub Pages: не обрывать уже идущую публикацию (иначе сайт может остаться полуобновлённым)
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,8 +26,11 @@ jobs:
       BASE: /rabochaya-tema/
     steps:
       # Версии закреплены по отпечатку коммита (защита от подмены метки). Обновляет Dependabot.
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - uses: withastro/action@56781b97402ce0487b7e61ce2cb960c0e2cc5289 # v3
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          # не оставлять токен в .git/config на время сборки (npm-пакеты не смогут его прочитать)
+          persist-credentials: false
+      - uses: withastro/action@56781b97402ce0487b7e61ce2cb960c0e2cc5289 # v3.0.2
         with:
           node-version: 22
 
@@ -41,4 +45,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

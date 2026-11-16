@@ -1,11 +1,17 @@
 version: 2
+# cooldown: Dependabot предлагает версию не раньше чем через N дней после выхода —
+# за это время подменённые/вредоносные релизы обычно успевают найти и отозвать.
 updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
